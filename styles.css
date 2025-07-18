@@ -511,6 +511,19 @@ body {
     overflow: hidden;
 }
 
+.company-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.company-image:hover {
+    transform: scale(1.05);
+}
+
 .image-placeholder {
     width: 100%;
     height: 100%;
