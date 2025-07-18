@@ -284,4 +284,77 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+// マウス移動によるフローティング要素の動的効果
+document.addEventListener('DOMContentLoaded', () => {
+    const floatingElements = document.querySelectorAll('.floating-element');
+    const heroSection = document.querySelector('.hero');
+    
+    if (heroSection && floatingElements.length > 0) {
+        let mouseX = 0;
+        let mouseY = 0;
+        let centerX = window.innerWidth / 2;
+        let centerY = window.innerHeight / 2;
+        
+        // マウス位置の追跡
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // 中心点の更新
+            centerX = window.innerWidth / 2;
+            centerY = window.innerHeight / 2;
+        });
+        
+        // フローティング要素の動的更新
+        function updateFloatingElements() {
+            floatingElements.forEach((element, index) => {
+                const rect = element.getBoundingClientRect();
+                const elementCenterX = rect.left + rect.width / 2;
+                const elementCenterY = rect.top + rect.height / 2;
+                
+                // マウスとの距離を計算
+                const distanceX = mouseX - elementCenterX;
+                const distanceY = mouseY - elementCenterY;
+                const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+                
+                // 最大影響距離
+                const maxDistance = 300;
+                
+                if (distance < maxDistance) {
+                    // 距離に基づいて移動量を計算
+                    const moveX = (distanceX / distance) * (maxDistance - distance) * 0.1;
+                    const moveY = (distanceY / distance) * (maxDistance - distance) * 0.1;
+                    
+                    // 要素ごとに異なる反応度
+                    const sensitivity = 0.5 + (index * 0.2);
+                    
+                    element.style.transform = `translate(${moveX * sensitivity}px, ${moveY * sensitivity}px) scale(${1 + (maxDistance - distance) / maxDistance * 0.1})`;
+                } else {
+                    // 元の位置に戻す
+                    element.style.transform = 'translate(0, 0) scale(1)';
+                }
+            });
+            
+            requestAnimationFrame(updateFloatingElements);
+        }
+        
+        updateFloatingElements();
+    }
+});
+
+// ロゴのホバー効果
+document.addEventListener('DOMContentLoaded', () => {
+    const logoIcon = document.querySelector('.logo-icon');
+    
+    if (logoIcon) {
+        logoIcon.addEventListener('mouseenter', () => {
+            logoIcon.style.transform = 'scale(1.1) rotate(5deg)';
+        });
+        
+        logoIcon.addEventListener('mouseleave', () => {
+            logoIcon.style.transform = 'scale(1) rotate(0deg)';
+        });
+    }
 }); 
