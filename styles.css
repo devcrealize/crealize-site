@@ -1178,13 +1178,58 @@ body {
     background: var(--light-gray);
 }
 
-.service-process h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    text-align: center;
-}
+    .service-process h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .service-platforms {
+        margin-top: 4rem;
+    }
+
+    .service-platforms h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .platforms-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .platform-item {
+        background: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        border-left: 4px solid var(--secondary-color);
+        transition: var(--transition);
+    }
+
+    .platform-item:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+    }
+
+    .platform-item h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+    }
+
+    .platform-item p {
+        color: #666;
+        line-height: 1.6;
+    }
 
 .process-steps {
     display: grid;
@@ -1431,6 +1476,11 @@ body {
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .platforms-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
