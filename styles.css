@@ -291,10 +291,7 @@ body {
     position: absolute;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
-    cursor: pointer;
-    transition: all 0.3s ease;
-    will-change: transform;
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
 }
 
 .floating-element:hover {
@@ -307,6 +304,8 @@ body {
     height: 100px;
     top: 20%;
     left: 20%;
+    animation-delay: 0s;
+    animation-duration: 8s;
 }
 
 .element-2 {
@@ -314,6 +313,8 @@ body {
     height: 80px;
     top: 60%;
     right: 30%;
+    animation-delay: 2.5s;
+    animation-duration: 10s;
 }
 
 .element-3 {
@@ -321,23 +322,25 @@ body {
     height: 120px;
     bottom: 20%;
     left: 40%;
+    animation-delay: 5s;
+    animation-duration: 12s;
 }
 
 @keyframes float {
     0% {
-        transform: translateY(0px) rotate(0deg) scale(1);
+        transform: translateY(0px) scale(1);
     }
     25% {
-        transform: translateY(-15px) rotate(90deg) scale(1.05);
+        transform: translateY(-20px) scale(1.02);
     }
     50% {
-        transform: translateY(-25px) rotate(180deg) scale(1.1);
+        transform: translateY(-30px) scale(1.05);
     }
     75% {
-        transform: translateY(-10px) rotate(270deg) scale(1.05);
+        transform: translateY(-15px) scale(1.03);
     }
     100% {
-        transform: translateY(0px) rotate(360deg) scale(1);
+        transform: translateY(0px) scale(1);
     }
 }
 

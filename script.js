@@ -286,97 +286,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// フローティング要素の高速ランダム移動とスクロール連動効果
+// フローティング要素のシンプルなスクロール連動効果
 document.addEventListener('DOMContentLoaded', () => {
     const floatingElements = document.querySelectorAll('.floating-element');
-    const heroSection = document.querySelector('.hero');
     
-    if (heroSection && floatingElements.length > 0) {
-        let mouseX = 0;
-        let mouseY = 0;
+    if (floatingElements.length > 0) {
         let scrollY = 0;
-        let time = 0;
-        
-        // CSSアニメーションを無効化してJavaScriptで制御
-        floatingElements.forEach(element => {
-            element.style.animation = 'none';
-        });
-        
-        // 各要素のランダムパラメータ
-        const elementParams = floatingElements.map((_, index) => ({
-            baseX: parseFloat(getComputedStyle(_).left) || 0,
-            baseY: parseFloat(getComputedStyle(_).top) || 0,
-            speedX: (Math.random() - 0.5) * 1.5 + 0.8, // より自然な速度
-            speedY: (Math.random() - 0.5) * 1.5 + 0.8,
-            amplitudeX: 25 + Math.random() * 30, // より適度な振幅
-            amplitudeY: 25 + Math.random() * 30,
-            phase: Math.random() * Math.PI * 2,
-            rotationSpeed: (Math.random() - 0.5) * 0.015,
-            scaleSpeed: (Math.random() - 0.5) * 0.008
-        }));
-        
-        // マウス位置の追跡
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
         
         // スクロール位置の追跡
         window.addEventListener('scroll', () => {
             scrollY = window.scrollY;
-        });
-        
-        // フローティング要素の動的更新
-        function updateFloatingElements() {
-            time += 0.016; // 約60fps
             
+            // スクロール時にアニメーション速度を微調整
             floatingElements.forEach((element, index) => {
-                const params = elementParams[index];
-                const rect = element.getBoundingClientRect();
-                
-                // 基礎ランダム移動計算（より滑らか）
-                const randomX = Math.sin(time * params.speedX + params.phase) * params.amplitudeX;
-                const randomY = Math.cos(time * params.speedY + params.phase) * params.amplitudeY;
-                
-                // スクロール連動効果（速度に応じて変化）
-                const scrollSpeed = Math.abs(scrollY - (scrollY * 0.99)); // スクロール速度を計算
-                const scrollMultiplier = Math.min(scrollSpeed * 0.1, 3); // 最大3倍まで
-                
-                const scrollEffectX = Math.sin(scrollY * 0.008 + params.phase) * (15 + scrollMultiplier * 5);
-                const scrollEffectY = Math.cos(scrollY * 0.012 + params.phase) * (10 + scrollMultiplier * 3);
-                
-                // マウス追従効果
-                const elementCenterX = rect.left + rect.width / 2;
-                const elementCenterY = rect.top + rect.height / 2;
-                const distanceX = mouseX - elementCenterX;
-                const distanceY = mouseY - elementCenterY;
-                const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-                const maxDistance = 250;
-                
-                let mouseEffectX = 0;
-                let mouseEffectY = 0;
-                
-                if (distance < maxDistance) {
-                    const intensity = (maxDistance - distance) / maxDistance;
-                    mouseEffectX = (distanceX / distance) * intensity * 12;
-                    mouseEffectY = (distanceY / distance) * intensity * 12;
-                }
-                
-                // 回転とスケール効果
-                const rotation = Math.sin(time * params.rotationSpeed) * 8;
-                const scale = 1 + Math.sin(time * params.scaleSpeed) * 0.08;
-                
-                // 最終的な位置と変形
-                const finalX = randomX + scrollEffectX + mouseEffectX;
-                const finalY = randomY + scrollEffectY + mouseEffectY;
-                
-                element.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${rotation}deg) scale(${scale})`;
+                const speedMultiplier = 1 + (scrollY * 0.0001); // 非常に軽微な速度変化
+                element.style.animationDuration = `${8 + index * 2}s`;
+                element.style.animationTimingFunction = `ease-in-out`;
             });
-            
-            requestAnimationFrame(updateFloatingElements);
-        }
-        
-        updateFloatingElements();
+        });
     }
 });
 
