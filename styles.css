@@ -294,6 +294,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     will-change: transform;
+    animation: float 6s ease-in-out infinite;
 }
 
 .floating-element:hover {
@@ -320,6 +321,24 @@ body {
     height: 120px;
     bottom: 20%;
     left: 40%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+    }
+    25% {
+        transform: translateY(-15px) rotate(90deg) scale(1.05);
+    }
+    50% {
+        transform: translateY(-25px) rotate(180deg) scale(1.1);
+    }
+    75% {
+        transform: translateY(-10px) rotate(270deg) scale(1.05);
+    }
+    100% {
+        transform: translateY(0px) rotate(360deg) scale(1);
+    }
 }
 
 /* セクション共通スタイル */
