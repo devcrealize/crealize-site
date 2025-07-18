@@ -89,6 +89,7 @@ if (contactForm) {
         }
         
         // 送信処理（実際の実装ではサーバーに送信）
+        // 内部処理用メールアドレス: Ito.Takuya@meka-tech.com
         showNotification('お問い合わせありがとうございます。後日ご連絡いたします。', 'success');
         this.reset();
     });
