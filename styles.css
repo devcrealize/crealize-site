@@ -83,11 +83,12 @@ body {
 .logo-m {
     position: relative;
     z-index: 2;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 900;
     color: white;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     animation: logoFloat 4s ease-in-out infinite;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
 }
 
 @keyframes logoPulse {
@@ -285,9 +286,9 @@ body {
     position: absolute;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
-    animation: float 8s ease-in-out infinite;
     cursor: pointer;
     transition: all 0.3s ease;
+    will-change: transform;
 }
 
 .floating-element:hover {
@@ -300,8 +301,6 @@ body {
     height: 100px;
     top: 20%;
     left: 20%;
-    animation-delay: 0s;
-    animation-duration: 7s;
 }
 
 .element-2 {
@@ -309,8 +308,6 @@ body {
     height: 80px;
     top: 60%;
     right: 30%;
-    animation-delay: 2.5s;
-    animation-duration: 9s;
 }
 
 .element-3 {
@@ -318,26 +315,6 @@ body {
     height: 120px;
     bottom: 20%;
     left: 40%;
-    animation-delay: 5s;
-    animation-duration: 6s;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg) scale(1);
-    }
-    25% {
-        transform: translateY(-15px) rotate(90deg) scale(1.05);
-    }
-    50% {
-        transform: translateY(-25px) rotate(180deg) scale(1.1);
-    }
-    75% {
-        transform: translateY(-10px) rotate(270deg) scale(1.05);
-    }
-    100% {
-        transform: translateY(0px) rotate(360deg) scale(1);
-    }
 }
 
 /* セクション共通スタイル */
