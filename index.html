@@ -865,22 +865,28 @@
                         <span class="contact-value">東京都港区新橋四丁目21番3号</span>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" action="https://formspree.io/f/xldljvdb" method="POST">
                     <div class="form-group">
                         <label for="name">お名前 *</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">メールアドレス *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
                     <div class="form-group">
                         <label for="company">会社名</label>
-                        <input type="text" id="company" name="company">
+                        <input type="text" id="company" name="company" autocomplete="organization">
                     </div>
                     <div class="form-group">
                         <label for="message">お問い合わせ内容 *</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" required>
+                            個人情報は本件対応のみに使用いたします。 *
+                        </label>
                     </div>
                     <button type="submit" class="btn btn-primary">送信する</button>
                 </form>
