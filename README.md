@@ -114,14 +114,40 @@ mekatech/
 - **画像最適化**: WebP対応
 - **コード最適化**: 圧縮・最小化
 
-## デプロイ方法
+## 🚀 デプロイ方法
 
-### GitHub Pagesでのデプロイ
+### 自動デプロイ（推奨）
 
-1. リポジトリをGitHubにプッシュ
-2. Settings > Pages でソースを選択
-3. ブランチを選択（mainまたはgh-pages）
-4. 保存してデプロイ完了
+このリポジトリはGitHub Actionsを使用して自動デプロイされます：
+
+1. **コードをプッシュ**すると自動的にデプロイが開始されます
+2. **GitHub Actions**でアセット最適化とデプロイが実行されます
+3. 数分後に **GitHub Pages** で公開されます
+
+### 手動デプロイ
+
+```bash
+# デプロイスクリプトを実行
+./deploy.sh "カスタムコミットメッセージ"
+
+# または通常のGitコマンド
+git add .
+git commit -m "更新内容"
+git push origin main
+```
+
+### GitHub Pages設定
+
+1. **Settings > Pages** に移動
+2. **Source**: "Deploy from a branch" を選択
+3. **Branch**: "main" を選択
+4. **Folder**: "/" (root) を選択
+5. **Save** をクリック
+
+### デプロイ状況確認
+
+- **Actions** タブでデプロイ状況を確認
+- **Settings > Pages** でデプロイ履歴を確認
 
 ### カスタムドメイン設定
 
