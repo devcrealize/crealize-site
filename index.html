@@ -16,9 +16,15 @@
     <link rel="stylesheet" href="styles.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="preload" href="styles.min.css" as="style">
-    <link rel="preload" href="script.min.js" as="script">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>:root{--primary-color:#3f51b5;--secondary-color:#00d4ff;--accent-color:#e91e63;--tertiary-color:#9c27b0;--background-color:#ffffff;--text-color:#3f51b5;--text-color-light:#5c6bc0;--light-gray:#f8f9fa;--border-color:#e9ecef;--border-radius:8px;--transition:all 0.3s ease}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Noto Sans JP',Inter,sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--background-color);overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 20px}.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);transition:var(--transition)}.nav-container{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}.logo{display:flex;align-items:center;gap:.5rem}.logo h1{font-size:1.5rem;font-weight:700;color:var(--primary-color)}.hero{padding:8rem 0 4rem;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;text-align:center}.hero-title{font-size:3rem;font-weight:700;margin-bottom:1rem}.hero-description{font-size:1.2rem;margin-bottom:2rem;opacity:.9}.btn{display:inline-block;padding:1rem 2rem;border-radius:var(--border-radius);text-decoration:none;font-weight:500;transition:var(--transition);border:none;cursor:pointer}.btn-primary{background:var(--accent-color);color:#fff}.btn-secondary{background:0 0;color:#fff;border:2px solid #fff}@media (max-width:768px){.hero-title{font-size:2rem}.hero-description{font-size:1rem}.container{padding:0 15px}}</style>
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    <link rel="preload" href="script-optimized.min.js" as="script">
+    <link rel="preload" href="images/logo.svg" as="image" type="image/svg+xml">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
 </head>
 <body>
     <!-- ヘッダー -->
@@ -287,7 +293,7 @@
                 </div>
                 <div class="about-visual">
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="メカセラ技研株式会社 - 会社イメージ" class="company-image" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=70" alt="メカセラ技研株式会社 - 会社イメージ" class="company-image" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -304,7 +310,7 @@
             <div class="cases-grid">
                 <div class="case-card">
                     <div class="case-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="ECサイト売上向上事例" class="case-image-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=70" alt="ECサイト売上向上事例" class="case-image-img" loading="lazy">
                     </div>
                     <div class="case-content">
                         <h3>ECサイト売上の飛躍的改善</h3>
@@ -338,7 +344,7 @@
                 </div>
                 <div class="case-card">
                     <div class="case-image">
-                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="SNSフォロワー急増事例" class="case-image-img" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=70" alt="SNSフォロワー急増事例" class="case-image-img" loading="lazy">
                     </div>
                     <div class="case-content">
                         <h3>SNSフォロワーの急成長</h3>
@@ -457,6 +463,20 @@
         </div>
     </footer>
 
-    <script src="script-optimized.min.js"></script>
+    <script src="script-optimized.min.js" defer></script>
+    <script>
+      // 注册Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
 </body>
 </html> 

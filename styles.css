@@ -890,7 +890,7 @@ body {
 }
 
 .footer-section p {
-    color: #ccc;
+    color: #666;
     line-height: 1.6;
 }
 
@@ -903,7 +903,7 @@ body {
 }
 
 .footer-section ul li a {
-    color: #ccc;
+    color: #666;
     text-decoration: none;
     transition: var(--transition);
 }
