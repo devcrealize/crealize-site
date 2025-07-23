@@ -4,7 +4,7 @@
   "description": "メカセラ技研株式会社官方网站",
   "main": "index.html",
   "scripts": {
-    "build": "cleancss -o styles.min.css styles.css && terser script-optimized.js -o script-optimized.min.js",
+    "build": "./build-optimized.sh",
     "dev": "python3 -m http.server 8000"
   },
   "keywords": [
