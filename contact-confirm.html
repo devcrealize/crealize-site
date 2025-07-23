@@ -331,8 +331,13 @@
                 formData.append('services', service);
             });
             
-            // Formspreeに送信（実際のエンドポイントに変更してください）
-            fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            // 送信ボタンを無効化
+            const submitBtn = document.querySelector('.btn-primary');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '送信中...';
+            
+            // Formspreeに送信
+            fetch('https://formspree.io/f/xldljvdb', {
                 method: 'POST',
                 body: formData,
                 headers: {
@@ -350,6 +355,9 @@
             .catch(error => {
                 alert('送信に失敗しました。もう一度お試しください。');
                 console.error('Error:', error);
+                // ボタンを元に戻す
+                submitBtn.disabled = false;
+                submitBtn.textContent = '送信する';
             });
         }
         
