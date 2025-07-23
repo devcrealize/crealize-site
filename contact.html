@@ -77,7 +77,8 @@
     }
     </script>
     
-    <link rel="stylesheet" href="styles.min.css">
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -97,11 +98,10 @@
                 </div>
             </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="index.html#home">ホーム</a></li>
                     <li><a href="about.html">会社概要</a></li>
                     <li><a href="services.html">サービス</a></li>
-                    <li><a href="cases.html">事例</a></li>
-
+                    <li><a href="index.html#cases">事例</a></li>
                     <li><a href="contact.html" class="cta-button active">お問い合わせ</a></li>
                 </ul>
                 <div class="hamburger">
@@ -396,6 +396,7 @@
         </div>
     </footer>
 
-    <script src="script-optimized.min.js"></script>
+    <link rel="preload" href="script-optimized.min.js" as="script">
+    <script src="script-optimized.min.js" defer></script>
 </body>
 </html> 
