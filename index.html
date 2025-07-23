@@ -4,27 +4,491 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="メカセラ技研株式会社は、デジタルマーケティングとウェブ開発の専門企業です。SEO、SNS運用、ウェブサイト制作でお客様のビジネス成長をサポートします。">
-    <meta name="keywords" content="デジタルマーケティング,SEO,SNS運用,ウェブサイト制作,メカセラ技研">
+    <meta name="keywords" content="デジタルマーケティング,SEO,SNS運用,ウェブサイト制作,メカセラ技研,海外マーケティング,ASO">
     <meta name="author" content="メカセラ技研株式会社">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="ja">
+    <meta name="geo.region" content="JP">
+    <meta name="geo.placename" content="東京都港区">
+    
+    <!-- Open Graph -->
     <meta property="og:title" content="メカセラ技研株式会社 - デジタルマーケティングの専門家">
     <meta property="og:description" content="お客様のビジネス成長をサポートするデジタルマーケティングソリューション">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mekasera-tech.co.jp">
+    <meta property="og:url" content="https://meka-tech.com">
+    <meta property="og:site_name" content="メカセラ技研株式会社">
+    <meta property="og:image" content="https://meka-tech.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="メカセラ技研株式会社 - デジタルマーケティングの専門家">
+    <meta name="twitter:description" content="お客様のビジネス成長をサポートするデジタルマーケティングソリューション">
+    <meta name="twitter:image" content="https://meka-tech.com/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://meka-tech.com">
+    
     <title>メカセラ技研株式会社 - デジタルマーケティングの専門家</title>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="styles.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>:root{--primary-color:#3f51b5;--secondary-color:#00d4ff;--accent-color:#e91e63;--tertiary-color:#9c27b0;--background-color:#ffffff;--text-color:#3f51b5;--text-color-light:#5c6bc0;--light-gray:#f8f9fa;--border-color:#e9ecef;--border-radius:8px;--transition:all 0.3s ease}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Noto Sans JP',Inter,sans-serif;line-height:1.6;color:var(--text-color);background-color:var(--background-color);overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 20px}.header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);transition:var(--transition)}.nav-container{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}.logo{display:flex;align-items:center;gap:.5rem}.logo h1{font-size:1.5rem;font-weight:700;color:var(--primary-color)}.hero{padding:8rem 0 4rem;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff;text-align:center}.hero-title{font-size:3rem;font-weight:700;margin-bottom:1rem}.hero-description{font-size:1.2rem;margin-bottom:2rem;opacity:.9}.btn{display:inline-block;padding:1rem 2rem;border-radius:var(--border-radius);text-decoration:none;font-weight:500;transition:var(--transition);border:none;cursor:pointer}.btn-primary{background:var(--accent-color);color:#fff}.btn-secondary{background:0 0;color:#fff;border:2px solid #fff}@media (max-width:768px){.hero-title{font-size:2rem}.hero-description{font-size:1rem}.container{padding:0 15px}}</style>
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "メカセラ技研株式会社",
+        "alternateName": "MEKASERA TECH",
+        "url": "https://meka-tech.com",
+        "logo": "https://meka-tech.com/images/logo.svg",
+        "description": "デジタルマーケティングの専門家として、お客様のビジネス成長をサポートいたします。",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "港区",
+            "addressRegion": "東京都",
+            "addressCountry": "JP"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+81-90-7896-5243",
+            "contactType": "customer service",
+            "email": "contact@meka-tech.com",
+            "availableLanguage": "Japanese"
+        },
+        "sameAs": [
+            "https://meka-tech.com"
+        ]
+    }
+    </script>
+    
+    <!-- 关键CSS内联 - 首屏渲染优化 -->
+    <style>
+        /* 关键CSS - 首屏渲染必需的基础样式 */
+        :root {
+            --primary-color: #3f51b5;
+            --secondary-color: #00d4ff;
+            --accent-color: #e91e63;
+            --tertiary-color: #9c27b0;
+            --background-color: #ffffff;
+            --text-color: #3f51b5;
+            --text-color-light: #5c6bc0;
+            --light-gray: #f8f9fa;
+            --border-color: #e9ecef;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-color-light);
+            font-weight: 400;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+        
+        /* 汉堡菜单激活状态 */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* 移动端菜单激活状态 */
+        .nav-menu.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            border-radius: 0 0 8px 8px;
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        .nav-menu.active li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-menu.active a {
+            display: block;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .nav-menu.active a:last-child {
+            border-bottom: none;
+        }
+        
+        .nav-menu.active a:hover {
+            background: rgba(63, 81, 181, 0.1);
+            color: var(--primary-color);
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 英雄区域基础样式 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-title-main {
+            display: block;
+            color: var(--primary-color);
+        }
+        
+        .hero-title-sub {
+            display: block;
+            color: var(--secondary-color);
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-color-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--tertiary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* 英雄视觉元素 */
+        .hero-visual {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-graphic {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color), var(--tertiary-color));
+            animation: float 8s ease-in-out infinite;
+            opacity: 0.8;
+        }
+        
+        .floating-element:hover {
+            transform: scale(1.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .element-1 {
+            width: 120px;
+            height: 120px;
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+        
+        .element-2 {
+            width: 80px;
+            height: 80px;
+            top: 60%;
+            right: 30%;
+            animation-delay: 2s;
+        }
+        
+        .element-3 {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 40%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-20px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(10px) rotate(240deg);
+            }
+        }
+        
+        /* 移动端响应式 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-visual {
+                height: 300px;
+                order: -1;
+            }
+            
+            .floating-element {
+                opacity: 0.6;
+            }
+            
+            .element-1 {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .element-2 {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .element-3 {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero-visual {
+                height: 250px;
+            }
+            
+            .element-1 {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .element-2 {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .element-3 {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    </style>
+    
+    <!-- 非关键资源异步加载 -->
     <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    
+    <!-- 关键资源预加载 -->
     <link rel="preload" href="script-optimized.min.js" as="script">
     <link rel="preload" href="images/logo.svg" as="image" type="image/svg+xml">
+    
+    <!-- DNS预解析 -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
+    <!-- 字体异步加载 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
 </head>
 <body>
     <a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
@@ -63,12 +527,12 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h2 class="hero-title">
-                    <span class="hero-title-main">創造性テクノロジーで、</span>
+                    <span class="hero-title-main">革新的なテクノロジーで、</span>
                     <span class="hero-title-sub">グローバルマーケティングの成果を最大化</span>
                 </h2>
                 <p class="hero-description">
-                    メカセラ技研は、革新的な戦略と最新技術を駆使し、クライアントの海外展開を強力に支援するデジタルマーケティングソリューションを提供しています。
-                    アプリのASOやSEO対策においても、豊富な実績と独自の手法で圧倒的なトラフィック獲得を実現し、グローバル市場でのビジネス成長を力強く後押しします。
+                    メカセラ技研は、最新のデジタルマーケティング技術と戦略的アプローチを駆使し、お客様の海外展開を強力にサポートいたします。
+                    SEO対策やASO（アプリストア最適化）においても、豊富な実績と独自の手法により圧倒的なトラフィック獲得を実現し、グローバル市場でのビジネス成長を力強く後押しいたします。
                 </p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn btn-primary">サービスを見る</a>
@@ -90,7 +554,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">サービス</h2>
-                <p class="section-subtitle">お客様一人ひとりのニーズに寄り添い、戦略立案から実行までをトータルで支援するソリューションをご提案いたします。</p>
+                <p class="section-subtitle">お客様一人ひとりのニーズに寄り添い、戦略立案から実行までをトータルでサポートするソリューションをご提案いたします。</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -100,25 +564,25 @@
                         </svg>
                     </div>
                     <h3>SEO対策</h3>
-                    <p>検索意図に基づく戦略的アプローチで、上位表示とCV獲得を同時に実現。短期の順位改善だけでなく、長期的に成果を出すSEOパートナーとしてご支援いたします。</p>
+                    <p>検索意図に基づく戦略的アプローチにより、上位表示とコンバージョン獲得を同時に実現いたします。短期の順位改善だけでなく、長期的に成果を出すSEOパートナーとしてお客様のビジネス成長をサポートいたします。</p>
                     
                     <div class="service-details">
-                        <h4>主な支援内容：</h4>
+                        <h4>主なサービス内容</h4>
                         <div class="service-detail-item">
                             <h5>キーワード設計・ユーザーインテント分析</h5>
-                            <p>顧客ニーズと検索意図を可視化し、ビジネスに直結するキーワード軸を構築。</p>
+                            <p>お客様のニーズと検索意図を可視化し、ビジネスに直結するキーワード戦略を構築いたします。</p>
                         </div>
                         <div class="service-detail-item">
-                            <h5>SEOに強い構造的コンテンツ制作</h5>
-                            <p>検索評価アルゴリズムを考慮した、E-E-A-T（専門性・権威性・信頼性・経験）対応コンテンツを企画・編集。</p>
+                            <h5>SEOに最適化されたコンテンツ制作</h5>
+                            <p>検索エンジンの評価アルゴリズムを考慮した、E-E-A-T（専門性・権威性・信頼性・経験）に対応したコンテンツを企画・制作いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>テクニカルSEOの実装支援</h5>
-                            <p>Core Web Vitals、構造化データ、内部リンク最適化、モバイル対応、インデックス管理まで対応。</p>
+                            <p>Core Web Vitals、構造化データ、内部リンク最適化、モバイル対応、インデックス管理まで包括的に対応いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>月次レポート・改善提案</h5>
-                            <p>順位推移・流入分析・CV効果を可視化し、次なるアクションへつなげるPDCAサイクルを構築。</p>
+                            <p>順位推移・流入分析・コンバージョン効果を可視化し、次なるアクションにつなげるPDCAサイクルを構築いたします。</p>
                         </div>
                     </div>
                 </div>
@@ -129,33 +593,33 @@
                         </svg>
                     </div>
                     <h3>SNS運用支援（TikTok・YouTube・Instagram 等）</h3>
-                    <p>ソーシャルメディアとインフルエンサーマーケティングを融合し、ブランド構築とファン化を両立。バズ獲得と中長期的なエンゲージメント強化を目指します。</p>
+                    <p>ソーシャルメディアとインフルエンサーマーケティングを融合し、ブランド構築とファン化を両立いたします。バズ獲得と中長期的なエンゲージメント強化により、持続的な成長を実現いたします。</p>
                     
                     <div class="service-details">
-                        <h4>主な支援内容：</h4>
+                        <h4>主なサービス内容</h4>
                         <div class="service-detail-item">
                             <h5>戦略設計・アカウント設計</h5>
-                            <p>プラットフォームごと（TikTok／YouTube Shorts／Instagram Reels 等）のアルゴリズムやトレンドを反映した戦略設計。ペルソナに基づく投稿テーマとKPI設計により、成果につながる運用設計を実施。</p>
+                            <p>プラットフォームごと（TikTok／YouTube Shorts／Instagram Reels 等）のアルゴリズムやトレンドを反映した戦略設計を行います。ペルソナに基づく投稿テーマとKPI設計により、成果につながる運用設計を実施いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>コンテンツ企画・動画制作</h5>
-                            <p>ショート動画に特化した企画・撮影・編集・テロップ制作をワンストップで対応（TikTok／YouTube／Instagram）。E-E-A-T を意識し、企業の専門性・信頼性を伝えるストーリーテリング型コンテンツ設計。</p>
+                            <p>ショート動画に特化した企画・撮影・編集・テロップ制作をワンストップで対応いたします（TikTok／YouTube／Instagram）。E-E-A-T を意識し、企業の専門性・信頼性を伝えるストーリーテリング型コンテンツを設計いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>投稿スケジューリング・マネジメント</h5>
-                            <p>バイラル狙いの旬のタイミング（例：TikTokトレンドチャレンジ・トピックタグ）に合わせ効率的な投稿計画。独自ツールやExcel／専用CMSでのスケジュール管理・進行体制整備。</p>
+                            <p>バイラル狙いの旬のタイミング（例：TikTokトレンドチャレンジ・トピックタグ）に合わせた効率的な投稿計画を立てます。独自ツールやExcel／専用CMSでのスケジュール管理・進行体制を整備いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>コミュニティ運営・コメント対応</h5>
-                            <p>インフルエンサーやファンとの接点構築による双方向コミュニケーション促進。コメント監視、取材対応、炎上リスク・クレーム即時対応体制。</p>
+                            <p>インフルエンサーやファンとの接点構築による双方向コミュニケーションを促進いたします。コメント監視、取材対応、炎上リスク・クレーム即時対応体制を構築いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>効果測定・PDCAレポート</h5>
-                            <p>フォロワー数、再生・いいね・保存・クリックなど主要指標を月次レポートで可視化。トレンドレポートや競合比較も交えた改善提案・施策アップデート。</p>
+                            <p>フォロワー数、再生・いいね・保存・クリックなど主要指標を月次レポートで可視化いたします。トレンドレポートや競合比較も交えた改善提案・施策アップデートを実施いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>インフルエンサーマーケティング連携</h5>
-                            <p>登録フォロワー10万超のクリエイター起用やMCN契約済パートナーとの協業で、さらにリーチ拡大。</p>
+                            <p>登録フォロワー10万超のクリエイター起用やMCN契約済パートナーとの協業により、さらにリーチ拡大を実現いたします。</p>
                         </div>
                     </div>
                 </div>
@@ -170,22 +634,22 @@
                     <p>グローバル向けアプリの可視性とダウンロード数を最大化し、ビジネス成果に直結するASO戦略を提供いたします。</p>
                     
                     <div class="service-details">
-                        <h4>コア戦略／強み</h4>
+                        <h4>コア戦略・強み</h4>
                         <div class="service-detail-item">
                             <h5>キーワード調査・最適化</h5>
-                            <p>専門ツール（例：AppTweak、Sensor Tower）を活用し、各国での検索ボリュームと競合状況を徹底分析。海外ユーザーのニーズに応えるロングテールキーワードも発掘します。</p>
+                            <p>専門ツール（例：AppTweak、Sensor Tower）を活用し、各国での検索ボリュームと競合状況を徹底分析いたします。海外ユーザーのニーズに応えるロングテールキーワードも発掘いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>多言語ローカライゼーション</h5>
-                            <p>単なる翻訳ではなく、文化的背景や表記のニュアンス（例：日本語におけるひらがな・漢字・カタカナの使い分け）を考慮した「感性を捉える翻訳」を実施します。</p>
+                            <p>単なる翻訳ではなく、文化的背景や表記のニュアンス（例：日本語におけるひらがな・漢字・カタカナの使い分け）を考慮した「感性を捉える翻訳」を実施いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>アプリストアページ最適化</h5>
-                            <p>タイトル・サブタイトル・説明文・キーワード欄の構成はSEO＋コンバージョン率（CVR）向上を視野に設計。アイコン・スクリーンショット・プロモーション動画についても、A/Bテストやベンチマークをもとに視覚訴求を最適化します。</p>
+                            <p>タイトル・サブタイトル・説明文・キーワード欄の構成はSEO＋コンバージョン率（CVR）向上を視野に設計いたします。アイコン・スクリーンショット・プロモーション動画についても、A/Bテストやベンチマークをもとに視覚訴求を最適化いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>競合モニタリング</h5>
-                            <p>ストア内での類似アプリの動きを常に監視し、ランキング変動やアップデート内容に即応。戦略のアップデートに反映してPDCAを高速で回します。</p>
+                            <p>ストア内での類似アプリの動きを常に監視し、ランキング変動やアップデート内容に即応いたします。戦略のアップデートに反映してPDCAを高速で回します。</p>
                         </div>
                         
                         <h4>独自手法：リアルユーザー活用によるダウンロード促進</h4>
@@ -194,18 +658,18 @@
                             <p>実際のユーザーにタスク（例：「アプリをダウンロードして触ってみる」「レビューを書く」など）を提供し、自然な形でダウンロード数とダウンロード速度（Velocity）を高めます。これはASO指標の重要な要素です。</p>
                         </div>
                         <div class="service-detail-item">
-                            <h5>ゲームアプリ／汎用アプリ領域での横断支援</h5>
-                            <p>多ジャンルで培った経験をもとに、アプリの特性に応じたキーワード構造やUI訴求を設計します。</p>
+                            <h5>ゲームアプリ・汎用アプリ領域での横断支援</h5>
+                            <p>多ジャンルで培った経験をもとに、アプリの特性に応じたキーワード構造やUI訴求を設計いたします。</p>
                         </div>
                         
-                        <h4>成果可視化＋PDCA</h4>
+                        <h4>成果可視化・PDCA</h4>
                         <div class="service-detail-item">
-                            <h5>月次／週次レポート</h5>
-                            <p>インプレッション数、ダウンロード数、CV率、レビュー数・評価の変化などを可視化し、施策効果を分析。次の改善施策を明確にします。</p>
+                            <h5>月次・週次レポート</h5>
+                            <p>インプレッション数、ダウンロード数、CV率、レビュー数・評価の変化などを可視化し、施策効果を分析いたします。次の改善施策を明確にいたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>エンゲージメント解析</h5>
-                            <p>レビューの質や量、評価の平均点、DAU（デイリーアクティブユーザー）率など、ランキング維持に不可欠な指標を継続的に追跡します。</p>
+                            <p>レビューの質や量、評価の平均点、DAU（デイリーアクティブユーザー）率など、ランキング維持に不可欠な指標を継続的に追跡いたします。</p>
                         </div>
                     </div>
                 </div>
@@ -216,45 +680,45 @@
                         </svg>
                     </div>
                     <h3>海外アプリ広告運用支援</h3>
-                    <p>Google Ads・Facebook Ads・TikTok Adsといった主要プラットフォームを活用し、アプリのダウンロード（ユーザー獲得／UA）に特化した広告戦略を設計・運用します。</p>
+                    <p>Google Ads・Facebook Ads・TikTok Adsといった主要プラットフォームを活用し、アプリのダウンロード（ユーザー獲得・UA）に特化した広告戦略を設計・運用いたします。</p>
                     
                     <div class="service-details">
                         <h4>基礎戦略</h4>
                         <div class="service-detail-item">
                             <h5>キャンペーン設計・運用最適化</h5>
-                            <p>国・地域・デモグラフィックに応じて目的別（CPI／ROAS）に予算配分し、効果的な広告構成を実現いたします。</p>
+                            <p>国・地域・デモグラフィックに応じて目的別（CPI・ROAS）に予算配分し、効果的な広告構成を実現いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>クリエイティブとランディング最適化</h5>
-                            <p>バナー／動画／カルーセルなど、各媒体の推奨フォーマットに準拠したABテストを実施。クリック後は最適化されたDLページに誘導します。</p>
+                            <p>バナー・動画・カルーセルなど、各媒体の推奨フォーマットに準拠したA/Bテストを実施いたします。クリック後は最適化されたダウンロードページに誘導いたします。</p>
                         </div>
                         <div class="service-detail-item">
-                            <h5>ターゲティング＆入札管理</h5>
-                            <p>ユーザー属性・行動履歴・CVRなどを活用し、精緻なオーディエンス設計とリアルタイム入札調整で費用対効果を最大化します。</p>
+                            <h5>ターゲティング・入札管理</h5>
+                            <p>ユーザー属性・行動履歴・CVRなどを活用し、精緻なオーディエンス設計とリアルタイム入札調整で費用対効果を最大化いたします。</p>
                         </div>
                         <div class="service-detail-item">
-                            <h5>リアルタイムモニタリング＋高速PDCA</h5>
-                            <p>CPI・CTR・CVRをリアルタイムで監視し、クリエイティブ差替え／予算再配分を即時実施。パフォーマンスを常に最適水準に保ちます。</p>
+                            <h5>リアルタイムモニタリング・高速PDCA</h5>
+                            <p>CPI・CTR・CVRをリアルタイムで監視し、クリエイティブ差替え・予算再配分を即時実施いたします。パフォーマンスを常に最適水準に保ちます。</p>
                         </div>
                         
-                        <h4>独自導入：Telegram × タスクウォールによる"リアルダウンロード"</h4>
+                        <h4>独自導入：Telegram × タスクウォールによる「リアルダウンロード」</h4>
                         <div class="service-detail-item">
                             <h5>Telegram広告連携でリアルユーザーへ直接アプローチ</h5>
                             <p>Telegramの広告プラットフォームを活用し、チャネル内に自然な形で配信することで、「実際にアプリを使うユーザー」の獲得を目指します。</p>
                         </div>
                         <div class="service-detail-item">
-                            <h5>タスクウォールによる実作業型DL誘導</h5>
-                            <p>タスクウォール上で「アプリをDLして起動」「レビュー投稿」などの実タスクを提供し、リアルユーザーによる自然DL・レビュー増加によって、VelocityやASO評価を強化します。</p>
+                            <h5>タスクウォールによる実作業型ダウンロード誘導</h5>
+                            <p>タスクウォール上で「アプリをダウンロードして起動」「レビュー投稿」などの実タスクを提供し、リアルユーザーによる自然なダウンロード・レビュー増加によって、VelocityやASO評価を強化いたします。</p>
                         </div>
                         
                         <h4>成果測定と最適化</h4>
                         <div class="service-detail-item">
-                            <h5>週次／月次レポートで可視化</h5>
-                            <p>インプレッション・クリック・CPI・LTV・リテンション・ROASなどのKPIをグラフィカルに整理し、課題抽出と改善策を提示。</p>
+                            <h5>週次・月次レポートで可視化</h5>
+                            <p>インプレッション・クリック・CPI・LTV・リテンション・ROASなどのKPIをグラフィカルに整理し、課題抽出と改善策を提示いたします。</p>
                         </div>
                         <div class="service-detail-item">
                             <h5>費用対効果の定量分析</h5>
-                            <p>CAC・LTV・広告ROIをもとに、最も効率的な広告投資配分へ調整します。</p>
+                            <p>CAC・LTV・広告ROIをもとに、最も効率的な広告投資配分へ調整いたします。</p>
                         </div>
                     </div>
                 </div>
@@ -269,7 +733,7 @@
                                 <div class="about-text">
                     <h2>メカセラ技研について</h2>
                     <p class="about-description">
-                        私たちメカセラ技研は、テクノロジーの力を最大限に活用し、お客様の事業拡大と市場での新たな可能性の創出を使命としております。豊富な導入実績と最新のマーケティング手法を融合し、クライアントの皆さまの成功を伴走型でご支援いたします。
+                        私たちメカセラ技研は、テクノロジーの力を最大限に活用し、お客様の事業拡大と市場での新たな可能性の創出を使命としております。豊富な導入実績と最新のマーケティング手法を融合し、お客様の成功を伴走型でサポートいたします。
                     </p>
                     
                     <h3>主な実績</h3>
@@ -319,7 +783,7 @@
                             <span class="achievement-badge">+150% achieved</span>
                         </div>
                         <div class="case-details">
-                            <p>SEO対策強化により、月間セッション数が200％増加。特定キーワードで検索順位が1位獲得し、顧客接触率を向上させました。</p>
+                            <p>SEO対策強化により、月間セッション数が200％増加いたしました。特定キーワードで検索順位が1位を獲得し、顧客接触率を向上させました。</p>
                             <div class="case-highlights">
                                 <div class="highlight-item">
                                     <span class="highlight-icon">📈</span>
@@ -464,20 +928,42 @@
     </footer>
     </main>
 
+    <!-- JavaScript异步加载 -->
     <script src="script-optimized.min.js" defer></script>
     <script>
-      // 注册Service Worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-              console.log('SW registered: ', registration);
-            })
-            .catch(registrationError => {
-              console.log('SW registration failed: ', registrationError);
+        // 性能监控
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                console.log(`页面加载时间: ${loadTime}ms`);
+                
+                // 记录关键指标
+                if ('PerformanceObserver' in window) {
+                    const observer = new PerformanceObserver((list) => {
+                        for (const entry of list.getEntries()) {
+                            if (entry.entryType === 'largest-contentful-paint') {
+                                console.log(`LCP: ${entry.startTime}ms`);
+                            }
+                        }
+                    });
+                    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+                }
             });
-        });
-      }
+        }
+        
+        // 注册Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
     </script>
+    
 </body>
 </html> 

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动端布局测试 - メカセラ技研</title>
+    <link rel="stylesheet" href="styles.min.css">
+    <style>
+        .test-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .test-section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid #3f51b5;
+        }
+        
+        .test-title {
+            color: #3f51b5;
+            margin-bottom: 1rem;
+        }
+        
+        .device-info {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+        
+        .layout-preview {
+            border: 2px dashed #ccc;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: white;
+        }
+        
+        .hero-preview {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .hero-title-preview {
+            font-size: 2rem;
+            color: #3f51b5;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-description-preview {
+            color: #5c6bc0;
+            margin-bottom: 1.5rem;
+        }
+        
+        .button-preview {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-preview {
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .btn-primary-preview {
+            background: #3f51b5;
+            color: white;
+        }
+        
+        .btn-secondary-preview {
+            background: transparent;
+            color: #3f51b5;
+            border: 2px solid #3f51b5;
+        }
+        
+        .floating-elements-preview {
+            position: relative;
+            height: 200px;
+            margin: 2rem 0;
+        }
+        
+        .floating-element-preview {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00d4ff, #e91e63, #9c27b0);
+            opacity: 0.6;
+        }
+        
+        .element-1-preview {
+            width: 60px;
+            height: 60px;
+            top: 20%;
+            left: 20%;
+        }
+        
+        .element-2-preview {
+            width: 50px;
+            height: 50px;
+            top: 60%;
+            right: 30%;
+        }
+        
+        .element-3-preview {
+            width: 55px;
+            height: 55px;
+            bottom: 20%;
+            left: 40%;
+        }
+        
+        .test-checklist {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        
+        .checklist-item.checked {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        
+        .checklist-item.unchecked {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .check-icon {
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .test-container {
+                padding: 0.5rem;
+            }
+            
+            .hero-title-preview {
+                font-size: 1.8rem;
+            }
+            
+            .button-preview {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-preview {
+                width: 100%;
+                max-width: 200px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title-preview {
+                font-size: 1.5rem;
+            }
+            
+            .floating-elements-preview {
+                height: 150px;
+            }
+            
+            .element-1-preview {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .element-2-preview {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .element-3-preview {
+                width: 38px;
+                height: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>📱 移动端布局测试</h1>
+        
+        <div class="test-section">
+            <h2 class="test-title">设备信息</h2>
+            <div class="device-info">
+                <p><strong>当前视口宽度:</strong> <span id="viewport-width"></span></p>
+                <p><strong>设备像素比:</strong> <span id="device-pixel-ratio"></span></p>
+                <p><strong>用户代理:</strong> <span id="user-agent"></span></p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">英雄区域布局预览</h2>
+            <div class="layout-preview">
+                <div class="hero-preview">
+                    <h2 class="hero-title-preview">
+                        <span style="display: block; color: #3f51b5;">創造性テクノロジーで、</span>
+                        <span style="display: block; color: #00d4ff;">グローバルマーケティングの成果を最大化</span>
+                    </h2>
+                    <p class="hero-description-preview">
+                        メカセラ技研は、革新的な戦略と最新技術を駆使し、クライアントの海外展開を強力に支援するデジタルマーケティングソリューションを提供しています。
+                    </p>
+                    <div class="button-preview">
+                        <a href="#" class="btn-preview btn-primary-preview">サービスを見る</a>
+                        <a href="#" class="btn-preview btn-secondary-preview">無料相談</a>
+                    </div>
+                    <div class="floating-elements-preview">
+                        <div class="floating-element-preview element-1-preview"></div>
+                        <div class="floating-element-preview element-2-preview"></div>
+                        <div class="floating-element-preview element-3-preview"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">响应式测试清单</h2>
+            <div class="test-checklist">
+                <div class="checklist-item" id="check-1">
+                    <span class="check-icon">⏳</span>
+                    <span>标题字体大小自适应</span>
+                </div>
+                <div class="checklist-item" id="check-2">
+                    <span class="check-icon">⏳</span>
+                    <span>按钮布局在移动端垂直排列</span>
+                </div>
+                <div class="checklist-item" id="check-3">
+                    <span class="check-icon">⏳</span>
+                    <span>浮动元素大小自适应</span>
+                </div>
+                <div class="checklist-item" id="check-4">
+                    <span class="check-icon">⏳</span>
+                    <span>汉堡菜单正常显示</span>
+                </div>
+                <div class="checklist-item" id="check-5">
+                    <span class="check-icon">⏳</span>
+                    <span>内容区域边距适配</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2 class="test-title">测试说明</h2>
+            <ol>
+                <li>调整浏览器窗口大小，观察布局变化</li>
+                <li>在移动端模拟器中测试</li>
+                <li>检查汉堡菜单功能</li>
+                <li>验证所有元素在不同屏幕尺寸下的显示效果</li>
+            </ol>
+            
+            <div style="margin-top: 2rem;">
+                <a href="index.html" class="btn-preview btn-primary-preview">🏠 返回主页</a>
+                <a href="test-mobile-menu.html" class="btn-preview btn-secondary-preview">🍔 测试汉堡菜单</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 更新设备信息
+        function updateDeviceInfo() {
+            document.getElementById('viewport-width').textContent = window.innerWidth + 'px';
+            document.getElementById('device-pixel-ratio').textContent = window.devicePixelRatio;
+            document.getElementById('user-agent').textContent = navigator.userAgent.substring(0, 50) + '...';
+        }
+        
+        // 检查响应式特性
+        function checkResponsiveFeatures() {
+            const width = window.innerWidth;
+            
+            // 检查1: 标题字体大小
+            const titleElement = document.querySelector('.hero-title-preview');
+            const titleSize = window.getComputedStyle(titleElement).fontSize;
+            const check1 = document.getElementById('check-1');
+            if (width <= 480 && titleSize.includes('1.5rem') || 
+                width <= 768 && titleSize.includes('1.8rem') || 
+                width > 768 && titleSize.includes('2rem')) {
+                check1.className = 'checklist-item checked';
+                check1.querySelector('.check-icon').textContent = '✅';
+            }
+            
+            // 检查2: 按钮布局
+            const buttonContainer = document.querySelector('.button-preview');
+            const buttonFlexDirection = window.getComputedStyle(buttonContainer).flexDirection;
+            const check2 = document.getElementById('check-2');
+            if (width <= 768 && buttonFlexDirection === 'column') {
+                check2.className = 'checklist-item checked';
+                check2.querySelector('.check-icon').textContent = '✅';
+            }
+            
+            // 检查3: 浮动元素大小
+            const floatingElements = document.querySelectorAll('.floating-element-preview');
+            const check3 = document.getElementById('check-3');
+            if (floatingElements.length > 0) {
+                check3.className = 'checklist-item checked';
+                check3.querySelector('.check-icon').textContent = '✅';
+            }
+            
+            // 检查4: 汉堡菜单
+            const check4 = document.getElementById('check-4');
+            if (width <= 768) {
+                check4.className = 'checklist-item checked';
+                check4.querySelector('.check-icon').textContent = '✅';
+            }
+            
+            // 检查5: 内容边距
+            const container = document.querySelector('.test-container');
+            const containerPadding = window.getComputedStyle(container).padding;
+            const check5 = document.getElementById('check-5');
+            if (width <= 768 && containerPadding.includes('0.5rem')) {
+                check5.className = 'checklist-item checked';
+                check5.querySelector('.check-icon').textContent = '✅';
+            }
+        }
+        
+        // 页面加载完成后执行检查
+        window.addEventListener('load', () => {
+            updateDeviceInfo();
+            checkResponsiveFeatures();
+        });
+        
+        // 窗口大小改变时更新
+        window.addEventListener('resize', () => {
+            updateDeviceInfo();
+            checkResponsiveFeatures();
+        });
+    </script>
+</body>
+</html> 

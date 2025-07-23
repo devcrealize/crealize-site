@@ -196,6 +196,68 @@ body {
     transition: var(--transition);
 }
 
+/* ハンバーガーメニューアクティブ状態 */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* モバイルメニューアクティブ状態 */
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    border-radius: 0 0 8px 8px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.nav-menu.active li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu.active a {
+    display: block;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-menu.active a:last-child {
+    border-bottom: none;
+}
+
+.nav-menu.active a:hover {
+    background: rgba(63, 81, 181, 0.1);
+    color: var(--primary-color);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ヒーローセクション */
 .hero {
     min-height: 100vh;

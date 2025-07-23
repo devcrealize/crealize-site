@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性能测试 - メカセラ技研</title>
+    <link rel="stylesheet" href="styles.min.css">
+    <style>
+        .performance-dashboard {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #3f51b5;
+        }
+        
+        .metric.good { border-left-color: #4CAF50; }
+        .metric.warning { border-left-color: #FF9800; }
+        .metric.poor { border-left-color: #f44336; }
+        
+        .metric-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .test-button {
+            background: #3f51b5;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 1rem 0;
+            font-size: 1rem;
+        }
+        
+        .test-button:hover {
+            background: #303f9f;
+        }
+    </style>
+</head>
+<body>
+    <div class="performance-dashboard">
+        <h1>🚀 性能测试仪表板</h1>
+        <p>此页面用于测试网站性能优化效果</p>
+        
+        <div class="metric">
+            <span>First Contentful Paint (FCP)</span>
+            <span class="metric-value" id="fcp">测试中...</span>
+        </div>
+        
+        <div class="metric">
+            <span>Largest Contentful Paint (LCP)</span>
+            <span class="metric-value" id="lcp">测试中...</span>
+        </div>
+        
+        <div class="metric">
+            <span>Total Blocking Time (TBT)</span>
+            <span class="metric-value" id="tbt">测试中...</span>
+        </div>
+        
+        <div class="metric">
+            <span>Cumulative Layout Shift (CLS)</span>
+            <span class="metric-value" id="cls">测试中...</span>
+        </div>
+        
+        <div class="metric">
+            <span>Speed Index</span>
+            <span class="metric-value" id="speed-index">测试中...</span>
+        </div>
+        
+        <button class="test-button" onclick="runPerformanceTest()">🔄 重新测试</button>
+        <button class="test-button" onclick="window.location.href='index.html'">🏠 返回主页</button>
+        
+        <div id="results" style="margin-top: 2rem; padding: 1rem; background: white; border-radius: 8px; display: none;">
+            <h3>测试结果分析</h3>
+            <div id="analysis"></div>
+        </div>
+    </div>
+
+    <script>
+        let fcpTime = 0;
+        let lcpTime = 0;
+        let tbtTime = 0;
+        let clsValue = 0;
+        let speedIndex = 0;
+        
+        // 性能监控
+        if ('PerformanceObserver' in window) {
+            // FCP
+            const fcpObserver = new PerformanceObserver((list) => {
+                const entries = list.getEntries();
+                const fcp = entries[entries.length - 1];
+                fcpTime = fcp.startTime;
+                document.getElementById('fcp').textContent = `${fcpTime.toFixed(0)}ms`;
+                updateMetricClass('fcp', fcpTime);
+            });
+            fcpObserver.observe({ entryTypes: ['paint'] });
+            
+            // LCP
+            const lcpObserver = new PerformanceObserver((list) => {
+                const entries = list.getEntries();
+                const lcp = entries[entries.length - 1];
+                lcpTime = lcp.startTime;
+                document.getElementById('lcp').textContent = `${lcpTime.toFixed(0)}ms`;
+                updateMetricClass('lcp', lcpTime);
+            });
+            lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+            
+            // TBT
+            const tbtObserver = new PerformanceObserver((list) => {
+                let totalBlockingTime = 0;
+                for (const entry of list.getEntries()) {
+                    if (entry.duration > 50) {
+                        totalBlockingTime += entry.duration - 50;
+                    }
+                }
+                tbtTime = totalBlockingTime;
+                document.getElementById('tbt').textContent = `${tbtTime.toFixed(0)}ms`;
+                updateMetricClass('tbt', tbtTime);
+            });
+            tbtObserver.observe({ entryTypes: ['longtask'] });
+            
+            // CLS
+            const clsObserver = new PerformanceObserver((list) => {
+                let cls = 0;
+                for (const entry of list.getEntries()) {
+                    cls += entry.value;
+                }
+                clsValue = cls;
+                document.getElementById('cls').textContent = clsValue.toFixed(3);
+                updateMetricClass('cls', clsValue);
+            });
+            clsObserver.observe({ entryTypes: ['layout-shift'] });
+        }
+        
+        // 页面加载完成后的分析
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                analyzePerformance();
+            }, 1000);
+        });
+        
+        function updateMetricClass(metric, value) {
+            const element = document.getElementById(metric);
+            const parent = element.parentElement;
+            
+            parent.classList.remove('good', 'warning', 'poor');
+            
+            if (metric === 'fcp') {
+                if (value < 1800) parent.classList.add('good');
+                else if (value < 3000) parent.classList.add('warning');
+                else parent.classList.add('poor');
+            } else if (metric === 'lcp') {
+                if (value < 2500) parent.classList.add('good');
+                else if (value < 4000) parent.classList.add('warning');
+                else parent.classList.add('poor');
+            } else if (metric === 'tbt') {
+                if (value < 200) parent.classList.add('good');
+                else if (value < 600) parent.classList.add('warning');
+                else parent.classList.add('poor');
+            } else if (metric === 'cls') {
+                if (value < 0.1) parent.classList.add('good');
+                else if (value < 0.25) parent.classList.add('warning');
+                else parent.classList.add('poor');
+            }
+        }
+        
+        function analyzePerformance() {
+            const analysis = document.getElementById('analysis');
+            const results = document.getElementById('results');
+            
+            let score = 0;
+            let recommendations = [];
+            
+            // FCP分析
+            if (fcpTime < 1800) {
+                score += 20;
+            } else if (fcpTime < 3000) {
+                score += 10;
+                recommendations.push('FCP时间较长，建议优化首屏渲染');
+            } else {
+                recommendations.push('FCP时间过长，需要立即优化');
+            }
+            
+            // LCP分析
+            if (lcpTime < 2500) {
+                score += 25;
+            } else if (lcpTime < 4000) {
+                score += 15;
+                recommendations.push('LCP时间较长，建议优化最大内容渲染');
+            } else {
+                recommendations.push('LCP时间过长，需要立即优化');
+            }
+            
+            // TBT分析
+            if (tbtTime < 200) {
+                score += 25;
+            } else if (tbtTime < 600) {
+                score += 15;
+                recommendations.push('TBT时间较长，建议优化JavaScript执行');
+            } else {
+                recommendations.push('TBT时间过长，需要立即优化');
+            }
+            
+            // CLS分析
+            if (clsValue < 0.1) {
+                score += 30;
+            } else if (clsValue < 0.25) {
+                score += 20;
+                recommendations.push('CLS值较高，建议优化布局稳定性');
+            } else {
+                recommendations.push('CLS值过高，需要立即优化');
+            }
+            
+            let performanceLevel = '';
+            if (score >= 90) performanceLevel = '优秀';
+            else if (score >= 70) performanceLevel = '良好';
+            else if (score >= 50) performanceLevel = '一般';
+            else performanceLevel = '需要优化';
+            
+            analysis.innerHTML = `
+                <h4>性能得分: ${score}/100 (${performanceLevel})</h4>
+                <h4>优化建议:</h4>
+                <ul>
+                    ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
+                </ul>
+            `;
+            
+            results.style.display = 'block';
+        }
+        
+        function runPerformanceTest() {
+            location.reload();
+        }
+    </script>
+</body>
+</html> 
