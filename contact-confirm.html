@@ -315,9 +315,14 @@
         // 送信処理
         function submitForm() {
             const urlParams = new URLSearchParams(window.location.search);
-            const formData = new FormData();
             
-            // フォームデータを構築
+            // 送信ボタンを無効化
+            const submitBtn = document.querySelector('.btn-primary');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '送信中...';
+            
+            // 直接Formspreeにリダイレクト
+            const formData = new URLSearchParams();
             formData.append('inquiry-type', urlParams.get('inquiry-type') || '');
             formData.append('name', urlParams.get('name') || '');
             formData.append('email', urlParams.get('email') || '');
@@ -331,34 +336,24 @@
                 formData.append('services', service);
             });
             
-            // 送信ボタンを無効化
-            const submitBtn = document.querySelector('.btn-primary');
-            submitBtn.disabled = true;
-            submitBtn.textContent = '送信中...';
+            // Formspreeに直接POST
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'https://formspree.io/f/xldljvdb';
+            form.style.display = 'none';
             
-            // Formspreeに送信
-            fetch('https://formspree.io/f/xldljvdb', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // 成功時は成功ページにリダイレクト
-                    window.location.href = 'contact-success.html';
-                } else {
-                    throw new Error('送信に失敗しました');
-                }
-            })
-            .catch(error => {
-                alert('送信に失敗しました。もう一度お試しください。');
-                console.error('Error:', error);
-                // ボタンを元に戻す
-                submitBtn.disabled = false;
-                submitBtn.textContent = '送信する';
-            });
+            // フォームデータを追加
+            for (const [key, value] of formData.entries()) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value;
+                form.appendChild(input);
+            }
+            
+            // フォームを送信
+            document.body.appendChild(form);
+            form.submit();
         }
         
         // ページ読み込み時に確認データを表示

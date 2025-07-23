@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formspree テスト - メカセラ技研株式会社</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #007cba; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #005a87; }
+        .test-info { background: #f0f0f0; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Formspree テストページ</h1>
+    
+    <div class="test-info">
+        <h3>テスト情報</h3>
+        <p><strong>Formspree エンドポイント:</strong> https://formspree.io/f/xldljvdb</p>
+        <p><strong>受信メール:</strong> Ito.Takuya@meka-tech.com</p>
+        <p><strong>テスト目的:</strong> Formspreeの設定が正しく動作するか確認</p>
+    </div>
+
+    <form action="https://formspree.io/f/xldljvdb" method="POST">
+        <div class="form-group">
+            <label for="name">お名前 *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">メールアドレス *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">メッセージ *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="test-type">テストタイプ</label>
+            <select id="test-type" name="test-type">
+                <option value="basic">基本テスト</option>
+                <option value="formspree">Formspree設定確認</option>
+                <option value="email">メール送信確認</option>
+            </select>
+        </div>
+        
+        <button type="submit">テスト送信</button>
+    </form>
+    
+    <div style="margin-top: 30px; padding: 15px; background: #e8f4fd; border-radius: 4px;">
+        <h3>テスト手順</h3>
+        <ol>
+            <li>上記フォームにテストデータを入力</li>
+            <li>「テスト送信」ボタンをクリック</li>
+            <li>Formspreeの確認ページが表示される</li>
+            <li>Ito.Takuya@meka-tech.com にメールが届くか確認</li>
+        </ol>
+    </div>
+</body>
+</html> 
