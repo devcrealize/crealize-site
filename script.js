@@ -2,7 +2,7 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const header = document.querySelector('.header');
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.querySelector('#contactForm');
 
 // ハンバーガーメニューの切り替え
 hamburger.addEventListener('click', () => {
