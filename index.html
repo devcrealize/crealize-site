@@ -27,10 +27,11 @@
     <link rel="dns-prefetch" href="https://images.unsplash.com">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
     <!-- ヘッダー -->
     <header class="header">
         <nav class="nav">
-            <div class="nav-container">
+            <div class="nav-container" role="navigation" aria-label="メインナビゲーション">
                             <div class="logo">
                 <div class="logo-icon">
                     <img src="images/logo.svg" alt="メカセラ技研ロゴ" class="logo-image">
@@ -57,6 +58,7 @@
     </header>
 
     <!-- メインビジュアル -->
+    <main id="main-content">
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -460,6 +462,7 @@
             </div>
         </div>
     </footer>
+    </main>
 
     <script src="script-optimized.min.js" defer></script>
     <script>
