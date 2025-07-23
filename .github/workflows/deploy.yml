@@ -20,13 +20,10 @@ jobs:
         cache: 'npm'
     
     - name: Install dependencies
-      run: |
-        npm install -g clean-css-cli terser
+      run: npm ci
     
     - name: Optimize assets
-      run: |
-        cleancss -o styles.min.css styles.css
-        terser script-optimized.js -o script-optimized.min.js
+      run: npm run build
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
