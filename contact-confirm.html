@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ確認 - メカセラ技研株式会社</title>
+    <meta name="description" content="お問い合わせ内容の確認ページです。内容をご確認の上、送信してください。">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="お問い合わせ,確認,メカセラ技研,デジタルマーケティング">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="language" content="ja">
+    <meta name="geo.region" content="JP">
+    <meta name="geo.placename" content="東京都港区">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="お問い合わせ確認 - メカセラ技研株式会社">
+    <meta property="og:description" content="お問い合わせ内容の確認ページです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meka-tech.com/contact-confirm.html">
+    <meta property="og:site_name" content="メカセラ技研株式会社">
+    <meta property="og:image" content="https://meka-tech.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="お問い合わせ確認 - メカセラ技研株式会社">
+    <meta name="twitter:description" content="お問い合わせ内容の確認ページです。">
+    <meta name="twitter:image" content="https://meka-tech.com/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://meka-tech.com/contact-confirm.html">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "お問い合わせ確認",
+        "description": "お問い合わせ内容の確認ページ",
+        "url": "https://meka-tech.com/contact-confirm.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "メカセラ技研株式会社",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+81-90-7896-5243",
+                "contactType": "customer service",
+                "email": "contact@meka-tech.com",
+                "availableLanguage": "Japanese"
+            }
+        }
+    }
+    </script>
+    
+    <!-- 关键CSS内联 -->
+    <style>
+        /* 关键CSS - 页面加载时立即需要的样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans JP', sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .logo { display: flex; align-items: center; gap: 1rem; }
+        .logo-icon { width: 40px; height: 40px; }
+        .logo-image { width: 100%; height: 100%; }
+        .logo h1 { font-size: 1.5rem; font-weight: 700; color: #333; }
+        .logo-subtitle { font-size: 0.8rem; color: #666; }
+        .page-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 120px 0 60px; text-align: center; }
+        .page-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .page-subtitle { font-size: 1.2rem; opacity: 0.9; }
+        .confirm-section { padding: 80px 0; background: #f8f9fa; }
+        .confirm-container { max-width: 800px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
+        .confirm-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; text-align: center; }
+        .confirm-title { font-size: 1.8rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .confirm-subtitle { opacity: 0.9; }
+        .confirm-content { padding: 2rem; }
+        .confirm-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee; }
+        .confirm-item:last-child { border-bottom: none; margin-bottom: 0; }
+        .confirm-label { font-weight: 600; color: #555; margin-bottom: 0.5rem; display: block; }
+        .confirm-value { background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid #667eea; }
+        .confirm-actions { padding: 2rem; background: #f8f9fa; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn { padding: 12px 24px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); }
+        .btn-secondary { background: #6c757d; color: white; }
+        .btn-secondary:hover { background: #5a6268; transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 2px solid #667eea; color: #667eea; }
+        .btn-outline:hover { background: #667eea; color: white; }
+        
+        @media (max-width: 768px) {
+            .page-title { font-size: 2rem; }
+            .confirm-title { font-size: 1.5rem; }
+            .confirm-actions { flex-direction: column; }
+            .btn { width: 100%; text-align: center; }
+        }
+    </style>
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    <link rel="preload" href="script-optimized.min.js" as="script">
+    
+    <!-- 字体预连接 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="images/logo.svg" alt="メカセラ技研ロゴ" class="logo-image">
+                    </div>
+                    <div>
+                        <h1>メカセラ技研</h1>
+                        <span class="logo-subtitle">MEKASERA TECH</span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="cases.html">事例</a></li>
+                    <li><a href="contact.html" class="cta-button active">お問い合わせ</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ページヘッダー -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">お問い合わせ確認</h1>
+            <p class="page-subtitle">入力内容をご確認ください</p>
+        </div>
+    </section>
+
+    <!-- 確認セクション -->
+    <section class="confirm-section">
+        <div class="container">
+            <div class="confirm-container">
+                <div class="confirm-header">
+                    <h2 class="confirm-title">入力内容の確認</h2>
+                    <p class="confirm-subtitle">以下の内容で送信します。内容をご確認の上、「送信する」ボタンをクリックしてください。</p>
+                </div>
+                
+                <div class="confirm-content" id="confirmContent">
+                    <!-- JavaScriptで動的に生成 -->
+                </div>
+                
+                <div class="confirm-actions">
+                    <button type="button" class="btn btn-outline" onclick="goBack()">修正する</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">送信する</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>メカセラ技研株式会社</h3>
+                    <p>デジタルマーケティングの専門家として、お客様のビジネス成長をサポートいたします。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>連絡先</h4>
+                    <p>📧 contact@meka-tech.com</p>
+                    <p>📞 90-7896-5243</p>
+                    <p>📍 東京都港区新橋四丁目21番3号</p>
+                </div>
+                <div class="footer-section">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="services.html#seo">SEO対策</a></li>
+                        <li><a href="services.html#sns">SNS運用</a></li>
+                        <li><a href="services.html#aso">ASO対策</a></li>
+                        <li><a href="services.html#ads">広告運用</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 メカセラ技研株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 非同期でJavaScriptを読み込み -->
+    <script>
+        // フォームデータを取得して表示
+        function displayConfirmData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const confirmContent = document.getElementById('confirmContent');
+            
+            const formData = {
+                'inquiry-type': urlParams.get('inquiry-type'),
+                'services': urlParams.getAll('services'),
+                'name': urlParams.get('name'),
+                'email': urlParams.get('email'),
+                'company': urlParams.get('company'),
+                'phone': urlParams.get('phone'),
+                'message': urlParams.get('message')
+            };
+            
+            // 問い合わせ種類の表示
+            const inquiryTypes = {
+                'consultation': '相談',
+                'request': '依頼',
+                'materials': '資料請求',
+                'other': 'その他'
+            };
+            
+            // サービスの表示
+            const serviceNames = {
+                'seo': 'SEO対策',
+                'ec': 'EC構築',
+                'sns': 'SNS運用',
+                'other': 'その他'
+            };
+            
+            let html = '';
+            
+            // 問い合わせ種類
+            if (formData['inquiry-type']) {
+                html += `
+                    <div class="confirm-item">
+                        <span class="confirm-label">お問い合わせの種類</span>
+                        <div class="confirm-value">${inquiryTypes[formData['inquiry-type']] || formData['inquiry-type']}</div>
+                    </div>
+                `;
+            }
+            
+            // 希望サービス
+            if (formData['services'] && formData['services'].length > 0) {
+                const selectedServices = formData['services'].map(service => serviceNames[service] || service).join('、');
+                html += `
+                    <div class="confirm-item">
+                        <span class="confirm-label">希望サービス</span>
+                        <div class="confirm-value">${selectedServices}</div>
+                    </div>
+                `;
+            }
+            
+            // お名前
+            if (formData['name']) {
+                html += `
+                    <div class="confirm-item">
+                        <span class="confirm-label">お名前</span>
+                        <div class="confirm-value">${formData['name']}</div>
+                    </div>
+                `;
+            }
+            
+            // メールアドレス
+            if (formData['email']) {
+                html += `
+                    <div class="confirm-item">
+                        <span class="confirm-label">メールアドレス</span>
+                        <div class="confirm-value">${formData['email']}</div>
+                    </div>
+                `;
+            }
+            
+            // 会社名
+            if (formData['company']) {
+                html += `
+                    <div class="confirm-item">
+                        <span class="confirm-label">会社名</span>
+                        <div class="confirm-value">${formData['company']}</div>
+                    </div>
+                `;
+            }
+            
+            // 電話番号
+            if (formData['phone']) {
+                html += `
+                    <div class="confirm-item">
+                        <span class="confirm-label">電話番号</span>
+                        <div class="confirm-value">${formData['phone']}</div>
+                    </div>
+                `;
+            }
+            
+            // お問い合わせ内容
+            if (formData['message']) {
+                html += `
+                    <div class="confirm-item">
+                        <span class="confirm-label">お問い合わせ内容</span>
+                        <div class="confirm-value">${formData['message'].replace(/\n/g, '<br>')}</div>
+                    </div>
+                `;
+            }
+            
+            confirmContent.innerHTML = html;
+        }
+        
+        // 戻るボタン
+        function goBack() {
+            window.history.back();
+        }
+        
+        // 送信処理
+        function submitForm() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const formData = new FormData();
+            
+            // フォームデータを構築
+            formData.append('inquiry-type', urlParams.get('inquiry-type') || '');
+            formData.append('name', urlParams.get('name') || '');
+            formData.append('email', urlParams.get('email') || '');
+            formData.append('company', urlParams.get('company') || '');
+            formData.append('phone', urlParams.get('phone') || '');
+            formData.append('message', urlParams.get('message') || '');
+            
+            // サービスを追加
+            const services = urlParams.getAll('services');
+            services.forEach(service => {
+                formData.append('services', service);
+            });
+            
+            // Formspreeに送信（実際のエンドポイントに変更してください）
+            fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // 成功時は成功ページにリダイレクト
+                    window.location.href = 'contact-success.html';
+                } else {
+                    throw new Error('送信に失敗しました');
+                }
+            })
+            .catch(error => {
+                alert('送信に失敗しました。もう一度お試しください。');
+                console.error('Error:', error);
+            });
+        }
+        
+        // ページ読み込み時に確認データを表示
+        document.addEventListener('DOMContentLoaded', displayConfirmData);
+    </script>
+    
+    <!-- 遅延読み込みJavaScript -->
+    <script src="script-optimized.min.js" defer></script>
+</body>
+</html> 

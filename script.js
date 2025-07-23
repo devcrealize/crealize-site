@@ -76,9 +76,10 @@ if (contactForm) {
         const email = formData.get('email');
         const company = formData.get('company');
         const message = formData.get('message');
+        const inquiryType = formData.get('inquiry-type');
         
         // 簡単なバリデーション
-        if (!name || !email || !message) {
+        if (!name || !email || !message || !inquiryType) {
             showNotification('必須項目を入力してください。', 'error');
             return;
         }
@@ -88,10 +89,23 @@ if (contactForm) {
             return;
         }
         
-        // 送信処理（実際の実装ではサーバーに送信）
-        // 内部処理用メールアドレス: Ito.Takuya@meka-tech.com
-        showNotification('お問い合わせありがとうございます。後日ご連絡いたします。', 'success');
-        this.reset();
+        // 確認ページにリダイレクト
+        const params = new URLSearchParams();
+        params.append('name', name);
+        params.append('email', email);
+        params.append('company', company || '');
+        params.append('phone', formData.get('phone') || '');
+        params.append('message', message);
+        params.append('inquiry-type', inquiryType);
+        
+        // 選択されたサービスを追加
+        const selectedServices = formData.getAll('services');
+        selectedServices.forEach(service => {
+            params.append('services', service);
+        });
+        
+        // 確認ページに遷移
+        window.location.href = 'contact-confirm.html?' + params.toString();
     });
 }
 
