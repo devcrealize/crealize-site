@@ -2307,6 +2307,38 @@ body {
     opacity: 0.9;
 }
 
+.map-info {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+}
+
+.map-info p {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.map-info p:first-child {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.map-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.map-actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    min-width: 120px;
+}
+
 /* お問い合わせFAQ */
 .contact-faq {
     padding: 6rem 0;
