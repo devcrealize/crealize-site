@@ -1,0 +1,24 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ribbon1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e91e63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9c27b0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ribbon2" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196f3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9c27b0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3f51b5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 第一条彩带 -->
+  <path d="M6 10 Q16 6 26 16 Q22 22 16 26 Q10 22 6 16 Z" 
+        fill="url(#ribbon1)" 
+        stroke="none"/>
+  
+  <!-- 第二条彩带 -->
+  <path d="M26 22 Q16 26 6 16 Q10 10 16 6 Q22 10 26 16 Z" 
+        fill="url(#ribbon2)" 
+        stroke="none"/>
+</svg>

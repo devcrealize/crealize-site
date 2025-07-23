@@ -11,7 +11,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mekasera-tech.co.jp/contact">
     <title>お問い合わせ - メカセラ技研株式会社</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,16 +23,15 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <div class="logo-circle"></div>
-                        <div class="logo-m">M</div>
-                    </div>
-                    <div>
-                        <h1>メカセラ技研</h1>
-                        <span class="logo-subtitle">MEKASERA TECH</span>
-                    </div>
+                            <div class="logo">
+                <div class="logo-icon">
+                    <img src="images/logo.svg" alt="メカセラ技研ロゴ" class="logo-image">
                 </div>
+                <div>
+                    <h1>メカセラ技研</h1>
+                    <span class="logo-subtitle">MEKASERA TECH</span>
+                </div>
+            </div>
                 <ul class="nav-menu">
                     <li><a href="index.html">ホーム</a></li>
                     <li><a href="about.html">会社概要</a></li>
@@ -52,44 +53,40 @@
     <section class="page-header">
         <div class="container">
             <h1 class="page-title">お問い合わせ</h1>
-            <p class="page-subtitle">お気軽にご相談ください。専門スタッフが丁寧にお答えします。</p>
+            <p class="page-subtitle">まずは無料診断から。お気軽にご相談ください！</p>
         </div>
     </section>
 
-    <!-- お問い合わせ方法 -->
+    <!-- 連絡先情報 -->
     <section class="contact-methods">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">お問い合わせ方法</h2>
-                <p class="section-subtitle">ご都合に合わせてお選びください</p>
+                <h2 class="section-title">連絡先情報</h2>
             </div>
             <div class="methods-grid">
-                <div class="method-card">
-                    <div class="method-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                        </svg>
-                    </div>
-                    <h3>お電話でのお問い合わせ</h3>
-                    <p>平日 9:00〜18:00</p>
-                    <div class="contact-number">
-                        <a href="tel:0312345678">03-1234-5678</a>
-                    </div>
-                    <p class="method-note">担当者が不在の場合は、折り返しお電話いたします。</p>
-                </div>
-                
                 <div class="method-card">
                     <div class="method-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3>メールでのお問い合わせ</h3>
-                    <p>24時間受付</p>
+                    <h3>📧 メール</h3>
                     <div class="contact-email">
                         <a href="mailto:contact@meka-tech.com">contact@meka-tech.com</a>
                     </div>
-                    <p class="method-note">通常24時間以内にご返信いたします。</p>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3>📞 電話</h3>
+                    <p>平日 9:00〜18:00</p>
+                    <div class="contact-number">
+                        <a href="tel:9078965243">90-7896-5243</a>
+                    </div>
                 </div>
                 
                 <div class="method-card">
@@ -99,12 +96,10 @@
                             <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
                     </div>
-                    <h3>オフィス訪問</h3>
-                    <p>平日 9:00〜18:00</p>
+                    <h3>📍 住所</h3>
                     <div class="contact-address">
-                        <p>〒105-0004<br>東京都港区新橋四丁目21番3号</p>
+                        <p>東京都港区新橋四丁目21番3号</p>
                     </div>
-                    <p class="method-note">事前にご連絡いただけるとスムーズです。</p>
                 </div>
             </div>
         </div>
@@ -115,93 +110,76 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">お問い合わせフォーム</h2>
-                <p class="section-subtitle">以下のフォームからお気軽にお問い合わせください</p>
             </div>
             <div class="form-container">
                 <form class="contact-form-detailed" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">お名前 <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="kana">フリガナ <span class="required">*</span></label>
-                            <input type="text" id="kana" name="kana" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">メールアドレス <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">電話番号</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                    
                     <div class="form-group">
-                        <label for="company">会社名</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">ご希望のサービス</label>
-                        <select id="service" name="service">
-                            <option value="">選択してください</option>
-                            <option value="seo">SEO対策</option>
-                            <option value="sns">SNS運用</option>
-                            <option value="web">ウェブサイト制作</option>
-                            <option value="content">コンテンツマーケティング</option>
-                            <option value="consultation">無料相談</option>
+                        <label for="inquiry-type">お問い合わせの種類 <span class="required">*</span></label>
+                        <select id="inquiry-type" name="inquiry-type" required>
+                            <option value="">選択</option>
+                            <option value="consultation">相談</option>
+                            <option value="request">依頼</option>
+                            <option value="materials">資料請求</option>
                             <option value="other">その他</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="budget">ご予算</label>
-                        <select id="budget" name="budget">
-                            <option value="">選択してください</option>
-                            <option value="under-50k">50万円未満</option>
-                            <option value="50k-100k">50万円〜100万円</option>
-                            <option value="100k-300k">100万円〜300万円</option>
-                            <option value="300k-500k">300万円〜500万円</option>
-                            <option value="over-500k">500万円以上</option>
-                            <option value="undecided">未定</option>
-                        </select>
+                        <label>希望サービス（複数選択可）</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="seo">
+                                <span class="checkmark"></span>
+                                SEO対策
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="ec">
+                                <span class="checkmark"></span>
+                                EC構築
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="sns">
+                                <span class="checkmark"></span>
+                                SNS運用
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="other">
+                                <span class="checkmark"></span>
+                                その他
+                            </label>
+                        </div>
                     </div>
                     
                     <div class="form-group">
-                        <label for="timeline">ご希望の開始時期</label>
-                        <select id="timeline" name="timeline">
-                            <option value="">選択してください</option>
-                            <option value="immediately">すぐに</option>
-                            <option value="within-1month">1ヶ月以内</option>
-                            <option value="within-3months">3ヶ月以内</option>
-                            <option value="within-6months">6ヶ月以内</option>
-                            <option value="undecided">未定</option>
-                        </select>
+                        <label for="name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="例：taro@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">会社名（任意）</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">電話番号（任意）</label>
+                        <input type="tel" id="phone" name="phone">
                     </div>
                     
                     <div class="form-group">
                         <label for="message">お問い合わせ内容 <span class="required">*</span></label>
-                        <textarea id="message" name="message" rows="8" required placeholder="ご質問やご要望を詳しくお聞かせください。"></textarea>
+                        <textarea id="message" name="message" rows="6" required placeholder="例：ECサイト集客について相談したいです"></textarea>
                     </div>
                     
                     <div class="form-group">
                         <label class="checkbox-label">
                             <input type="checkbox" id="privacy" name="privacy" required>
                             <span class="checkmark"></span>
-                            <a href="#" target="_blank">プライバシーポリシー</a>に同意します <span class="required">*</span>
-                        </label>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            <span class="checkmark"></span>
-                            メールマガジンの配信を希望します
+                            個人情報は本件対応のみに使用いたします。 <span class="required">*</span>
                         </label>
                     </div>
                     
@@ -305,7 +283,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>メカセラ技研株式会社</h3>
-                    <p>デジタルマーケティングの専門家として、お客様のビジネス成長をサポートします。</p>
+                    <p>デジタルマーケティングの専門家として、お客様のビジネス成長をサポートいたします。</p>
                 </div>
                 <div class="footer-section">
                     <h4>サービス</h4>
@@ -328,7 +306,7 @@
                 <div class="footer-section">
                     <h4>お問い合わせ</h4>
                     <ul>
-                        <li>電話: 03-1234-5678</li>
+                        <li>電話: 90-7896-5243</li>
                         <li>メール: contact@meka-tech.com</li>
                     </ul>
                 </div>
@@ -339,6 +317,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.min.js"></script>
 </body>
 </html> 

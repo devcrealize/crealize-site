@@ -58,7 +58,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // アニメーション対象要素の監視
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.service-card, .case-card, .about-content, .contact-content');
+    const animateElements = document.querySelectorAll('.case-card, .about-content, .contact-content');
     animateElements.forEach(el => {
         el.classList.add('scroll-animate');
         observer.observe(el);

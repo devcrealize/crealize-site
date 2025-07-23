@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mekasera-tech.co.jp/sitemap.xml 

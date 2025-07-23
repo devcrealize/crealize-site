@@ -11,26 +11,29 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mekasera-tech.co.jp">
     <title>メカセラ技研株式会社 - デジタルマーケティングの専門家</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="styles.min.css" as="style">
+    <link rel="preload" href="script.min.js" as="script">
 </head>
 <body>
     <!-- ヘッダー -->
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <div class="logo-circle"></div>
-                        <div class="logo-m">M</div>
-                    </div>
-                    <div>
-                        <h1>メカセラ技研</h1>
-                        <span class="logo-subtitle">MEKASERA TECH</span>
-                    </div>
+                            <div class="logo">
+                <div class="logo-icon">
+                    <img src="images/logo.svg" alt="メカセラ技研ロゴ" class="logo-image">
                 </div>
+                <div>
+                    <h1>メカセラ技研</h1>
+                    <span class="logo-subtitle">MEKASERA TECH</span>
+                </div>
+            </div>
                 <ul class="nav-menu">
                     <li><a href="#home">ホーム</a></li>
                     <li><a href="#about">会社概要</a></li>
@@ -53,12 +56,12 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h2 class="hero-title">
-                    <span class="hero-title-main">デジタルマーケティングで</span>
-                    <span class="hero-title-sub">ビジネスの未来を創造する</span>
+                    <span class="hero-title-main">創造性テクノロジーで、</span>
+                    <span class="hero-title-sub">グローバルマーケティングの成果を最大化</span>
                 </h2>
                 <p class="hero-description">
-                    メカセラ技研は、最新のテクノロジーとクリエイティブな戦略で、
-                    お客様のビジネス成長を加速させるデジタルマーケティングソリューションを提供します。
+                    メカセラ技研は、革新的な戦略と最新技術を駆使し、クライアントの海外展開を強力に支援するデジタルマーケティングソリューションを提供しています。
+                    アプリのASOやSEO対策においても、豊富な実績と独自の手法で圧倒的なトラフィック獲得を実現し、グローバル市場でのビジネス成長を力強く後押しします。
                 </p>
                 <div class="hero-buttons">
                     <a href="#services" class="btn btn-primary">サービスを見る</a>
@@ -80,7 +83,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">サービス</h2>
-                <p class="section-subtitle">お客様のニーズに合わせた包括的なソリューション</p>
+                <p class="section-subtitle">お客様一人ひとりのニーズに寄り添い、戦略立案から実行までをトータルで支援するソリューションをご提案いたします。</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -90,13 +93,27 @@
                         </svg>
                     </div>
                     <h3>SEO対策</h3>
-                    <p>検索エンジン最適化により、お客様のウェブサイトを上位表示させ、自然流入を増やします。</p>
-                    <ul class="service-features">
-                        <li>キーワード分析・戦略立案</li>
-                        <li>コンテンツ最適化</li>
-                        <li>技術的SEO対策</li>
-                        <li>月次レポート</li>
-                    </ul>
+                    <p>検索意図に基づく戦略的アプローチで、上位表示とCV獲得を同時に実現。短期の順位改善だけでなく、長期的に成果を出すSEOパートナーとしてご支援いたします。</p>
+                    
+                    <div class="service-details">
+                        <h4>主な支援内容：</h4>
+                        <div class="service-detail-item">
+                            <h5>キーワード設計・ユーザーインテント分析</h5>
+                            <p>顧客ニーズと検索意図を可視化し、ビジネスに直結するキーワード軸を構築。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>SEOに強い構造的コンテンツ制作</h5>
+                            <p>検索評価アルゴリズムを考慮した、E-E-A-T（専門性・権威性・信頼性・経験）対応コンテンツを企画・編集。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>テクニカルSEOの実装支援</h5>
+                            <p>Core Web Vitals、構造化データ、内部リンク最適化、モバイル対応、インデックス管理まで対応。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>月次レポート・改善提案</h5>
+                            <p>順位推移・流入分析・CV効果を可視化し、次なるアクションへつなげるPDCAサイクルを構築。</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -104,14 +121,36 @@
                             <path d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2"/>
                         </svg>
                     </div>
-                    <h3>SNS運用</h3>
-                    <p>ソーシャルメディアを活用したブランド構築とエンゲージメント向上を実現します。</p>
-                    <ul class="service-features">
-                        <li>コンテンツ企画・制作</li>
-                        <li>投稿スケジュール管理</li>
-                        <li>コミュニティ運営</li>
-                        <li>効果測定・分析</li>
-                    </ul>
+                    <h3>SNS運用支援（TikTok・YouTube・Instagram 等）</h3>
+                    <p>ソーシャルメディアとインフルエンサーマーケティングを融合し、ブランド構築とファン化を両立。バズ獲得と中長期的なエンゲージメント強化を目指します。</p>
+                    
+                    <div class="service-details">
+                        <h4>主な支援内容：</h4>
+                        <div class="service-detail-item">
+                            <h5>戦略設計・アカウント設計</h5>
+                            <p>プラットフォームごと（TikTok／YouTube Shorts／Instagram Reels 等）のアルゴリズムやトレンドを反映した戦略設計。ペルソナに基づく投稿テーマとKPI設計により、成果につながる運用設計を実施。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>コンテンツ企画・動画制作</h5>
+                            <p>ショート動画に特化した企画・撮影・編集・テロップ制作をワンストップで対応（TikTok／YouTube／Instagram）。E-E-A-T を意識し、企業の専門性・信頼性を伝えるストーリーテリング型コンテンツ設計。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>投稿スケジューリング・マネジメント</h5>
+                            <p>バイラル狙いの旬のタイミング（例：TikTokトレンドチャレンジ・トピックタグ）に合わせ効率的な投稿計画。独自ツールやExcel／専用CMSでのスケジュール管理・進行体制整備。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>コミュニティ運営・コメント対応</h5>
+                            <p>インフルエンサーやファンとの接点構築による双方向コミュニケーション促進。コメント監視、取材対応、炎上リスク・クレーム即時対応体制。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>効果測定・PDCAレポート</h5>
+                            <p>フォロワー数、再生・いいね・保存・クリックなど主要指標を月次レポートで可視化。トレンドレポートや競合比較も交えた改善提案・施策アップデート。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>インフルエンサーマーケティング連携</h5>
+                            <p>登録フォロワー10万超のクリエイター起用やMCN契約済パートナーとの協業で、さらにリーチ拡大。</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -120,14 +159,48 @@
                             <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3>海外APP ASO</h3>
-                    <p>App Store Optimizationにより、海外アプリストアでのアプリの可視性とダウンロード数を最大化します。</p>
-                    <ul class="service-features">
-                        <li>キーワード調査・最適化</li>
-                        <li>多言語ローカライゼーション</li>
-                        <li>アプリストアページ最適化</li>
-                        <li>競合分析・監視</li>
-                    </ul>
+                    <h3>海外APP ASO支援</h3>
+                    <p>グローバル向けアプリの可視性とダウンロード数を最大化し、ビジネス成果に直結するASO戦略を提供いたします。</p>
+                    
+                    <div class="service-details">
+                        <h4>コア戦略／強み</h4>
+                        <div class="service-detail-item">
+                            <h5>キーワード調査・最適化</h5>
+                            <p>専門ツール（例：AppTweak、Sensor Tower）を活用し、各国での検索ボリュームと競合状況を徹底分析。海外ユーザーのニーズに応えるロングテールキーワードも発掘します。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>多言語ローカライゼーション</h5>
+                            <p>単なる翻訳ではなく、文化的背景や表記のニュアンス（例：日本語におけるひらがな・漢字・カタカナの使い分け）を考慮した「感性を捉える翻訳」を実施します。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>アプリストアページ最適化</h5>
+                            <p>タイトル・サブタイトル・説明文・キーワード欄の構成はSEO＋コンバージョン率（CVR）向上を視野に設計。アイコン・スクリーンショット・プロモーション動画についても、A/Bテストやベンチマークをもとに視覚訴求を最適化します。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>競合モニタリング</h5>
+                            <p>ストア内での類似アプリの動きを常に監視し、ランキング変動やアップデート内容に即応。戦略のアップデートに反映してPDCAを高速で回します。</p>
+                        </div>
+                        
+                        <h4>独自手法：リアルユーザー活用によるダウンロード促進</h4>
+                        <div class="service-detail-item">
+                            <h5>タスクウォール経由でのリアルユーザー誘導</h5>
+                            <p>実際のユーザーにタスク（例：「アプリをダウンロードして触ってみる」「レビューを書く」など）を提供し、自然な形でダウンロード数とダウンロード速度（Velocity）を高めます。これはASO指標の重要な要素です。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>ゲームアプリ／汎用アプリ領域での横断支援</h5>
+                            <p>多ジャンルで培った経験をもとに、アプリの特性に応じたキーワード構造やUI訴求を設計します。</p>
+                        </div>
+                        
+                        <h4>成果可視化＋PDCA</h4>
+                        <div class="service-detail-item">
+                            <h5>月次／週次レポート</h5>
+                            <p>インプレッション数、ダウンロード数、CV率、レビュー数・評価の変化などを可視化し、施策効果を分析。次の改善施策を明確にします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>エンゲージメント解析</h5>
+                            <p>レビューの質や量、評価の平均点、DAU（デイリーアクティブユーザー）率など、ランキング維持に不可欠な指標を継続的に追跡します。</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -135,14 +208,48 @@
                             <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.122 2.122"/>
                         </svg>
                     </div>
-                    <h3>海外向け広告運用</h3>
-                    <p>Google Ads、Facebook Ads、TikTok Ads 等の主要プラットフォームを活用し、海外市場に最適化された広告戦略の企画・提案・運用を行います。</p>
-                    <ul class="service-features">
-                        <li>広告戦略立案</li>
-                        <li>クリエイティブ制作</li>
-                        <li>ターゲティング最適化</li>
-                        <li>リアルタイム監視・調整</li>
-                    </ul>
+                    <h3>海外アプリ広告運用支援</h3>
+                    <p>Google Ads・Facebook Ads・TikTok Adsといった主要プラットフォームを活用し、アプリのダウンロード（ユーザー獲得／UA）に特化した広告戦略を設計・運用します。</p>
+                    
+                    <div class="service-details">
+                        <h4>基礎戦略</h4>
+                        <div class="service-detail-item">
+                            <h5>キャンペーン設計・運用最適化</h5>
+                            <p>国・地域・デモグラフィックに応じて目的別（CPI／ROAS）に予算配分し、効果的な広告構成を実現いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>クリエイティブとランディング最適化</h5>
+                            <p>バナー／動画／カルーセルなど、各媒体の推奨フォーマットに準拠したABテストを実施。クリック後は最適化されたDLページに誘導します。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>ターゲティング＆入札管理</h5>
+                            <p>ユーザー属性・行動履歴・CVRなどを活用し、精緻なオーディエンス設計とリアルタイム入札調整で費用対効果を最大化します。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>リアルタイムモニタリング＋高速PDCA</h5>
+                            <p>CPI・CTR・CVRをリアルタイムで監視し、クリエイティブ差替え／予算再配分を即時実施。パフォーマンスを常に最適水準に保ちます。</p>
+                        </div>
+                        
+                        <h4>独自導入：Telegram × タスクウォールによる"リアルダウンロード"</h4>
+                        <div class="service-detail-item">
+                            <h5>Telegram広告連携でリアルユーザーへ直接アプローチ</h5>
+                            <p>Telegramの広告プラットフォームを活用し、チャネル内に自然な形で配信することで、「実際にアプリを使うユーザー」の獲得を目指します。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>タスクウォールによる実作業型DL誘導</h5>
+                            <p>タスクウォール上で「アプリをDLして起動」「レビュー投稿」などの実タスクを提供し、リアルユーザーによる自然DL・レビュー増加によって、VelocityやASO評価を強化します。</p>
+                        </div>
+                        
+                        <h4>成果測定と最適化</h4>
+                        <div class="service-detail-item">
+                            <h5>週次／月次レポートで可視化</h5>
+                            <p>インプレッション・クリック・CPI・LTV・リテンション・ROASなどのKPIをグラフィカルに整理し、課題抽出と改善策を提示。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>費用対効果の定量分析</h5>
+                            <p>CAC・LTV・広告ROIをもとに、最も効率的な広告投資配分へ調整します。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,30 +259,35 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <div class="about-text">
+                                <div class="about-text">
                     <h2>メカセラ技研について</h2>
                     <p class="about-description">
-                        私たちは、テクノロジーの力でビジネスの可能性を広げることを使命としています。
-                        豊富な経験と最新のトレンドを組み合わせ、お客様の成功をサポートします。
+                        私たちメカセラ技研は、テクノロジーの力を最大限に活用し、お客様の事業拡大と市場での新たな可能性の創出を使命としております。豊富な導入実績と最新のマーケティング手法を融合し、クライアントの皆さまの成功を伴走型でご支援いたします。
                     </p>
+                    
+                    <h3>主な実績</h3>
                     <div class="about-stats">
                         <div class="stat">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">成功事例</span>
+                            <span class="stat-number">120+</span>
+                            <span class="stat-label">プロジェクト支援実績</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">5年</span>
-                            <span class="stat-label">業界経験</span>
+                            <span class="stat-number">6年</span>
+                            <span class="stat-label">業界運用経験</span>
                         </div>
                         <div class="stat">
                             <span class="stat-number">98%</span>
-                            <span class="stat-label">顧客満足度</span>
+                            <span class="stat-label">導入後成果改善率</span>
                         </div>
                     </div>
+                    
+                    <p class="about-description">
+                        これらの実績は、当社が多様な業界・業態において確かな成果を継続的に生み出している証です。広告運用、SEO、ASO、SNS運用など、各種施策においても高い改善率を実現しております。
+                    </p>
                 </div>
                 <div class="about-visual">
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="メカセラ技研株式会社 - 会社イメージ" class="company-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="メカセラ技研株式会社 - 会社イメージ" class="company-image" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -187,32 +299,74 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">成功事例</h2>
-                <p class="section-subtitle">お客様との協働で生まれた成果</p>
+                <p class="section-subtitle">お客様との協働による成果</p>
             </div>
             <div class="cases-grid">
                 <div class="case-card">
                     <div class="case-image">
-                        <div class="image-placeholder">事例1</div>
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="ECサイト売上向上事例" class="case-image-img" loading="lazy">
                     </div>
                     <div class="case-content">
-                        <h3>ECサイト売上向上</h3>
-                        <p>SEO対策により、月間売上を150%向上させました。</p>
+                        <h3>ECサイト売上の飛躍的改善</h3>
+                        <div class="case-achievement">
+                            <span class="achievement-badge">+150% achieved</span>
+                        </div>
+                        <div class="case-details">
+                            <p>SEO対策強化により、月間セッション数が200％増加。特定キーワードで検索順位が1位獲得し、顧客接触率を向上させました。</p>
+                            <div class="case-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">📈</span>
+                                    <span>売上150％アップ</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">🚀</span>
+                                    <span>流入200％増加</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="case-results">
-                            <span class="result">売上150%向上</span>
-                            <span class="result">流入200%増加</span>
+                            <div class="result">
+                                <span class="result-number">+150%</span>
+                                <span class="result-label">売上向上</span>
+                            </div>
+                            <div class="result">
+                                <span class="result-number">+200%</span>
+                                <span class="result-label">セッション数増加</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="case-card">
                     <div class="case-image">
-                        <div class="image-placeholder">事例2</div>
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="SNSフォロワー急増事例" class="case-image-img" loading="lazy">
                     </div>
                     <div class="case-content">
-                        <h3>SNSフォロワー急増</h3>
-                        <p>戦略的なSNS運用で、フォロワー数を3倍に増やしました。</p>
+                        <h3>SNSフォロワーの急成長</h3>
+                        <div class="case-achievement">
+                            <span class="achievement-badge">+300% achieved</span>
+                        </div>
+                        <div class="case-details">
+                            <p>投稿頻度・コンテンツ戦略を見直し、エンゲージメント指標を改善。フォロワーとの接触率（いいね・コメント）を重視し、月間インプレッションが5倍に増加しました。</p>
+                            <div class="case-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">👥</span>
+                                    <span>フォロワー数3倍</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">💬</span>
+                                    <span>エンゲージメント率大幅増</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="case-results">
-                            <span class="result">フォロワー300%増加</span>
-                            <span class="result">エンゲージメント向上</span>
+                            <div class="result">
+                                <span class="result-number">+300%</span>
+                                <span class="result-label">フォロワー数増加</span>
+                            </div>
+                            <div class="result">
+                                <span class="result-number">5倍</span>
+                                <span class="result-label">インプレッション増加</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,10 +384,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>連絡先情報</h3>
-                    <div class="contact-item">
-                        <span class="contact-label">電話番号:</span>
-                        <span class="contact-value">03-1234-5678</span>
-                    </div>
+
                     <div class="contact-item">
                         <span class="contact-label">メール:</span>
                         <span class="contact-value">contact@meka-tech.com</span>
@@ -272,7 +423,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>メカセラ技研株式会社</h3>
-                    <p>デジタルマーケティングの専門家として、お客様のビジネス成長をサポートします。</p>
+                    <p>デジタルマーケティングの専門家として、お客様のビジネス成長をサポートいたします。</p>
                 </div>
                 <div class="footer-section">
                     <h4>サービス</h4>
@@ -306,6 +457,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script-optimized.min.js"></script>
 </body>
 </html> 
