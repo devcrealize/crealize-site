@@ -11,11 +11,27 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        npm install -g clean-css-cli terser
+    
+    - name: Optimize assets
+      run: |
+        cleancss -o styles.min.css styles.css
+        terser script-optimized.js -o script-optimized.min.js
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: . 
+        publish_dir: .
+        force_orphan: true 
