@@ -2285,6 +2285,7 @@ body {
 
 .access-map {
     position: relative;
+    min-height: 400px;
 }
 
 .map-placeholder {

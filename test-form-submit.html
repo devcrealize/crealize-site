@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォーム送信テスト</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #007cba; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; }
+        .debug-info { background: #f0f0f0; padding: 15px; margin: 20px 0; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>フォーム送信テスト</h1>
+    
+    <div class="debug-info">
+        <h3>テスト情報</h3>
+        <p><strong>アクション:</strong> contact-confirm.html</p>
+        <p><strong>メソッド:</strong> GET</p>
+        <p><strong>JavaScript:</strong> 無効化</p>
+    </div>
+
+    <form action="contact-confirm.html" method="GET">
+        <div class="form-group">
+            <label for="inquiry-type">お問い合わせの種類 *</label>
+            <select id="inquiry-type" name="inquiry-type" required>
+                <option value="">選択</option>
+                <option value="consultation">相談</option>
+                <option value="request">依頼</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="name">お名前 *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">メールアドレス *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">お問い合わせ内容 *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="privacy" required>
+                個人情報は本件対応のみに使用いたします。 *
+            </label>
+        </div>
+        
+        <button type="submit">送信する</button>
+    </form>
+
+    <div class="debug-info">
+        <h3>テスト手順</h3>
+        <ol>
+            <li>フォームに情報を入力</li>
+            <li>「送信する」ボタンをクリック</li>
+            <li>contact-confirm.htmlにリダイレクトされるか確認</li>
+            <li>URLパラメータにデータが含まれているか確認</li>
+        </ol>
+    </div>
+</body>
+</html> 
