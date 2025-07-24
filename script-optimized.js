@@ -7,7 +7,8 @@
         hamburger: document.querySelector('.hamburger'),
         navMenu: document.querySelector('.nav-menu'),
         header: document.querySelector('.header'),
-        contactForm: document.querySelector('.contact-form')
+        contactForm: document.querySelector('.contact-form'),
+        contactFormDetailed: document.querySelector('.contact-form-detailed')
     };
     
     // 防抖函数
@@ -102,6 +103,11 @@
         if (elements.contactForm) {
             elements.contactForm.addEventListener('submit', handleFormSubmit);
         }
+        
+        // 详细表单处理
+        if (elements.contactFormDetailed) {
+            elements.contactFormDetailed.addEventListener('submit', handleDetailedFormSubmit);
+        }
     }
     
     // 表单提交处理
@@ -127,6 +133,40 @@
         // 提交处理
         showNotification('お問い合わせありがとうございます。後日ご連絡いたします。', 'success');
         this.reset();
+    }
+    
+    // 详细表单提交处理
+    function handleDetailedFormSubmit(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const inquiryType = formData.get('inquiry-type');
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+        const privacy = formData.get('privacy');
+        
+        // 验证
+        if (!inquiryType || !name || !email || !message || !privacy) {
+            showNotification('必須項目を入力してください。', 'error');
+            return;
+        }
+        
+        if (!isValidEmail(email)) {
+            showNotification('有効なメールアドレスを入力してください。', 'error');
+            return;
+        }
+        
+        // 构建URL参数
+        const params = new URLSearchParams();
+        for (const [key, value] of formData.entries()) {
+            if (value) {
+                params.append(key, value);
+            }
+        }
+        
+        // 跳转到确认页面
+        window.location.href = 'contact-confirm.html?' + params.toString();
     }
     
     // 邮箱验证
