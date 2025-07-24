@@ -102,11 +102,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
     
-    <!-- 字体预加载优化 - 只加载必要字体 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- 字体优化 - 使用本地字体，避免外部字体加载 -->
+    <!-- 移除Google Fonts引用，使用CSS中的本地字体回退 -->
 </head>
 <body>
     <!-- ヘッダー -->
