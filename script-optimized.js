@@ -3,13 +3,7 @@
     'use strict';
     
     // DOM元素缓存
-    const elements = {
-        hamburger: document.querySelector('.hamburger'),
-        navMenu: document.querySelector('.nav-menu'),
-        header: document.querySelector('.header'),
-        contactForm: document.querySelector('.contact-form'),
-        contactFormDetailed: document.querySelector('.contact-form-detailed')
-    };
+    let elements = {};
     
     // 防抖函数
     function debounce(func, wait) {
@@ -92,6 +86,15 @@
     }
     
     function initApp() {
+        // 初始化DOM元素
+        elements = {
+            hamburger: document.querySelector('.hamburger'),
+            navMenu: document.querySelector('.nav-menu'),
+            header: document.querySelector('.header'),
+            contactForm: document.querySelector('.contact-form'),
+            contactFormDetailed: document.querySelector('.contact-form-detailed')
+        };
+        
         // 动画元素观察
         const animateElements = document.querySelectorAll('.case-card, .about-content, .contact-content');
         animateElements.forEach(el => {
