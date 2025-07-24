@@ -293,17 +293,17 @@ body {
 
 .hero-title-main {
     display: block;
-    color: var(--text-color);
+    color: white;
 }
 
 .hero-title-sub {
     display: block;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .hero-description {
     font-size: 1.1rem;
-    color: var(--text-color);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2rem;
     line-height: 1.8;
 }
@@ -1300,13 +1300,13 @@ img {
 
 /* 统一色彩规范 - 与首页保持一致 */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --tertiary-color: #8e44ad;
+    --primary-color: #3f51b5;
+    --secondary-color: #00d4ff;
+    --accent-color: #e91e63;
+    --tertiary-color: #9c27b0;
     --background-color: #ffffff;
-    --text-color: #2c3e50;
-    --text-color-light: #34495e;
+    --text-color: #3f51b5;
+    --text-color-light: #5c6bc0;
     --text-color-white: #ffffff;
     --light-gray: #f8f9fa;
     --border-color: #e9ecef;
@@ -1446,8 +1446,8 @@ button, input, select, textarea {
 
 /* 统一hero区域样式 */
 .hero {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    color: var(--text-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--tertiary-color) 100%);
+    color: white;
     padding: 120px 0 80px;
     text-align: center;
     position: relative;
