@@ -3,80 +3,471 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="メカセラ技研株式会社へのお問い合わせページです。デジタルマーケティングについてのご相談、お見積り依頼など、お気軽にお問い合わせください。">
-    <meta name="keywords" content="お問い合わせ,デジタルマーケティング,SEO,SNS運用,ウェブサイト制作,無料相談">
-    <meta name="author" content="メカセラ技研株式会社">
+    <title>お問い合わせ - メカセラ技研 | MEKASERA TECH</title>
+    <meta name="description" content="メカセラ技研へのお問い合わせはこちらから。SEO対策、ASO対策、グローバルマーケティングについてご相談ください。">
+    <meta name="keywords" content="お問い合わせ, メカセラ技研, SEO対策, ASO対策, グローバルマーケティング">
+    <meta name="author" content="メカセラ技研">
     <meta name="robots" content="index, follow">
     <meta name="language" content="ja">
     <meta name="geo.region" content="JP">
-    <meta name="geo.placename" content="東京都港区">
+    <meta name="geo.placename" content="Tokyo">
+    
+    <!-- 缓存控制 -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta http-equiv="Expires" content="31536000">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="お問い合わせ - メカセラ技研株式会社">
-    <meta property="og:description" content="デジタルマーケティングについてのご相談、お見積り依頼など">
+    <meta property="og:title" content="お問い合わせ - メカセラ技研 | MEKASERA TECH">
+    <meta property="og:description" content="メカセラ技研へのお問い合わせはこちらから。SEO対策、ASO対策、グローバルマーケティングについてご相談ください。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://meka-tech.com/contact">
-    <meta property="og:site_name" content="メカセラ技研株式会社">
-    <meta property="og:image" content="https://meka-tech.com/images/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://meka-tech.com/contact.html">
+    <meta property="og:site_name" content="メカセラ技研 | MEKASERA TECH">
+    <meta property="og:image" content="https://meka-tech.com/images/company-image.jpg">
     <meta property="og:locale" content="ja_JP">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="お問い合わせ - メカセラ技研株式会社">
-    <meta name="twitter:description" content="デジタルマーケティングについてのご相談、お見積り依頼など">
-    <meta name="twitter:image" content="https://meka-tech.com/images/og-image.jpg">
+    <meta name="twitter:title" content="お問い合わせ - メカセラ技研 | MEKASERA TECH">
+    <meta name="twitter:description" content="メカセラ技研へのお問い合わせはこちらから。SEO対策、ASO対策、グローバルマーケティングについてご相談ください。">
+    <meta name="twitter:image" content="https://meka-tech.com/images/company-image.jpg">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://meka-tech.com/contact">
+    <link rel="canonical" href="https://meka-tech.com/contact.html">
     
-    <title>お問い合わせ - メカセラ技研株式会社</title>
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
     
-    <!-- 结构化数据 -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "お問い合わせ",
-        "description": "メカセラ技研株式会社へのお問い合わせページ",
-        "url": "https://meka-tech.com/contact",
-        "mainEntity": {
-            "@type": "Organization",
-            "name": "メカセラ技研株式会社",
-            "url": "https://meka-tech.com",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+81-90-7896-5243",
-                "contactType": "customer service",
-                "email": "contact@meka-tech.com",
-                "availableLanguage": "Japanese",
-                "hoursAvailable": {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": [
-                        "Monday",
-                        "Tuesday", 
-                        "Wednesday",
-                        "Thursday",
-                        "Friday"
-                    ],
-                    "opens": "09:00",
-                    "closes": "18:00"
-                }
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "4-chōme−21−3 新橋東急ビル",
-                "addressLocality": "Shinbashi, Minato City",
-                "addressRegion": "Tokyo",
-                "postalCode": "105-0004",
-                "addressCountry": "JP"
+    <!-- 关键CSS内联 -->
+    <style>
+        /* 关键渲染路径CSS */
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #8b5cf6;
+            --accent-color: #ec4899;
+            --text-color: #1f2937;
+            --light-text: #6b7280;
+            --background: #ffffff;
+            --light-bg: #f9fafb;
+            --border-color: #e5e7eb;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--background);
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+        
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.875rem;
+            color: var(--light-text);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            text-align: center;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            min-height: 80px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+            min-height: 1.2em;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            min-height: 44px;
+            box-sizing: border-box;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            cursor: pointer;
+            min-height: 24px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            margin: 0;
+            flex-shrink: 0;
+        }
+        
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            min-height: 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            position: relative;
+            background: white;
+            flex-shrink: 0;
+        }
+        
+        .access-map {
+            position: relative;
+            min-height: 400px;
+            aspect-ratio: 16/9;
+            width: 100%;
+        }
+        
+        .access-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: var(--border-radius);
+        }
+        
+        .map-info {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+        }
+        
+        .map-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .map-actions a {
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-size: 0.875rem;
+            transition: background 0.3s ease;
+        }
+        
+        .map-actions a:hover {
+            background: #2563eb;
+        }
+        
+        .footer {
+            background: var(--text-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
             }
         }
-    }
-    </script>
+        
+        /* 确保所有h1标签都有明确的字体大小 */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+        
+        /* 优化CLS - 为所有图片和iframe添加固定尺寸 */
+        img, iframe, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 确保logo图片有固定尺寸 */
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        /* 确保服务卡片图片有固定尺寸 */
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
+        }
+        
+        /* 确保案例图片有固定尺寸 */
+        .case-image {
+            width: 100%;
+            height: 200px;
+            min-height: 200px;
+            object-fit: cover;
+        }
+    </style>
     
     <!-- 资源预加载和缓存优化 -->
     <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -85,7 +476,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
     
-    <!-- 字体预加载优化 -->
+    <!-- 字体预加载优化 - 只加载必要字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
