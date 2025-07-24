@@ -115,6 +115,15 @@
         if (elements.contactFormDetailed) {
             console.log('contactFormDetailed イベントリスナーを設定しました');
             elements.contactFormDetailed.addEventListener('submit', handleDetailedFormSubmit);
+            
+            // 添加按钮点击事件监听器作为备用
+            const submitButton = elements.contactFormDetailed.querySelector('button[type="submit"]');
+            if (submitButton) {
+                console.log('送信ボタンのイベントリスナーも設定しました');
+                submitButton.addEventListener('click', function(e) {
+                    console.log('送信ボタンがクリックされました');
+                });
+            }
         } else {
             console.log('contactFormDetailed 要素が見つかりませんでした');
         }
@@ -169,13 +178,18 @@
                 privacy: !privacy
             });
             e.preventDefault();
-            alert('必須項目を入力してください。\n\n不足項目:\n' + 
+            
+            // 强制显示错误信息
+            const errorMessage = '必須項目を入力してください。\n\n不足項目:\n' + 
                   (!inquiryType ? '- お問い合わせの種類\n' : '') +
                   (!name ? '- お名前\n' : '') +
                   (!email ? '- メールアドレス\n' : '') +
                   (!message ? '- お問い合わせ内容\n' : '') +
-                  (!privacy ? '- 個人情報同意\n' : ''));
-            return;
+                  (!privacy ? '- 個人情報同意\n' : '');
+            
+            console.log('エラーメッセージ:', errorMessage);
+            alert(errorMessage);
+            return false;
         }
         
         if (!isValidEmail(email)) {
