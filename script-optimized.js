@@ -109,7 +109,10 @@
         
         // 详细表单处理
         if (elements.contactFormDetailed) {
+            console.log('contactFormDetailed イベントリスナーを設定しました');
             elements.contactFormDetailed.addEventListener('submit', handleDetailedFormSubmit);
+        } else {
+            console.log('contactFormDetailed 要素が見つかりませんでした');
         }
     }
     
@@ -140,6 +143,8 @@
     
     // 详细表单提交处理
     function handleDetailedFormSubmit(e) {
+        console.log('handleDetailedFormSubmit が呼び出されました');
+        
         const formData = new FormData(this);
         const inquiryType = formData.get('inquiry-type');
         const name = formData.get('name');
@@ -147,14 +152,18 @@
         const message = formData.get('message');
         const privacy = formData.get('privacy');
         
+        console.log('フォームデータ:', { inquiryType, name, email, message, privacy });
+        
         // 验证
         if (!inquiryType || !name || !email || !message || !privacy) {
+            console.log('バリデーション失敗');
             e.preventDefault();
             showNotification('必須項目を入力してください。', 'error');
             return;
         }
         
         if (!isValidEmail(email)) {
+            console.log('メールアドレスバリデーション失敗');
             e.preventDefault();
             showNotification('有効なメールアドレスを入力してください。', 'error');
             return;
@@ -162,6 +171,7 @@
         
         // 验证通过，允许表单正常提交
         console.log('フォーム検証成功、確認ページにリダイレクトします');
+        // 表单会正常提交到 contact-confirm.html
     }
     
     // 邮箱验证
