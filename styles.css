@@ -293,17 +293,17 @@ body {
 
 .hero-title-main {
     display: block;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .hero-title-sub {
     display: block;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .hero-description {
     font-size: 1.1rem;
-    color: var(--text-color-light);
+    color: var(--text-color);
     margin-bottom: 2rem;
     line-height: 1.8;
 }
@@ -1546,8 +1546,8 @@ button, input, select, textarea {
 
 /* 统一footer样式 */
 .footer {
-    background: var(--background-color);
-    color: var(--text-color);
+    background: var(--primary-color);
+    color: var(--text-color-white);
     padding: 3rem 0 1rem;
 }
 
@@ -1560,7 +1560,7 @@ button, input, select, textarea {
 
 .footer-section h3,
 .footer-section h4 {
-    color: var(--text-color);
+    color: white;
     margin-bottom: 1rem;
 }
 
@@ -1575,20 +1575,20 @@ button, input, select, textarea {
 }
 
 .footer-section ul li a {
-    color: var(--text-color-light);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .footer-section ul li a:hover {
-    color: var(--primary-color);
+    color: var(--text-color-white);
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 1rem;
     text-align: center;
-    color: var(--text-color-light);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* 移动端响应式 - 统一所有768px以下的样式 */
