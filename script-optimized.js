@@ -140,8 +140,6 @@
     
     // 详细表单提交处理
     function handleDetailedFormSubmit(e) {
-        e.preventDefault();
-        
         const formData = new FormData(this);
         const inquiryType = formData.get('inquiry-type');
         const name = formData.get('name');
@@ -151,25 +149,19 @@
         
         // 验证
         if (!inquiryType || !name || !email || !message || !privacy) {
+            e.preventDefault();
             showNotification('必須項目を入力してください。', 'error');
             return;
         }
         
         if (!isValidEmail(email)) {
+            e.preventDefault();
             showNotification('有効なメールアドレスを入力してください。', 'error');
             return;
         }
         
-        // 构建URL参数
-        const params = new URLSearchParams();
-        for (const [key, value] of formData.entries()) {
-            if (value) {
-                params.append(key, value);
-            }
-        }
-        
-        // 跳转到确认页面
-        window.location.href = 'contact-confirm.html?' + params.toString();
+        // 验证通过，允许表单正常提交
+        console.log('フォーム検証成功、確認ページにリダイレクトします');
     }
     
     // 邮箱验证
