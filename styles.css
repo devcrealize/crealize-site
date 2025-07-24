@@ -1546,8 +1546,8 @@ button, input, select, textarea {
 
 /* 统一footer样式 */
 .footer {
-    background: var(--primary-color);
-    color: var(--text-color-white);
+    background: var(--background-color);
+    color: var(--text-color);
     padding: 3rem 0 1rem;
 }
 
@@ -1560,7 +1560,7 @@ button, input, select, textarea {
 
 .footer-section h3,
 .footer-section h4 {
-    color: white;
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
@@ -1575,20 +1575,20 @@ button, input, select, textarea {
 }
 
 .footer-section ul li a {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color-light);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .footer-section ul li a:hover {
-    color: var(--text-color-white);
+    color: var(--primary-color);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid var(--border-color);
     padding-top: 1rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color-light);
 }
 
 /* 移动端响应式 - 统一所有768px以下的样式 */
