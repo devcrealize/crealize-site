@@ -137,6 +137,12 @@
     
     // 详细表单提交处理
     function handleDetailedFormSubmit(e) {
+        // 检查是否是Formspree表单
+        if (this.action && this.action.includes('formspree.io')) {
+            // 让表单正常提交到Formspree
+            return true;
+        }
+        
         e.preventDefault();
         
         const formData = new FormData(this);
