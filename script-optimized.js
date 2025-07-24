@@ -49,10 +49,11 @@
         }
     });
     
-    // 滚动时头部背景变化 - 使用防抖
+    // 滚动时头部背景变化 - 使用防抖和现代API
     const handleScroll = debounce(() => {
         if (elements.header) {
-            if (window.scrollY > 100) {
+            const scrollY = window.scrollY || window.pageYOffset;
+            if (scrollY > 100) {
                 elements.header.style.background = 'rgba(255, 255, 255, 0.98)';
                 elements.header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
             } else {
