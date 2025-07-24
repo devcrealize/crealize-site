@@ -32,8 +32,14 @@
     <link rel="canonical" href="https://meka-tech.com/about">
     
     <title>会社概要 - メカセラ技研株式会社</title>
+    
+    <!-- 缓存控制 -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta http-equiv="Expires" content="31536000">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
     
     <!-- 结构化数据 -->
     <script type="application/ld+json">
@@ -67,11 +73,18 @@
     }
     </script>
     
+    <!-- 资源预加载和缓存优化 -->
     <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="script-optimized.min.js" as="script">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    
+    <!-- 字体预加载优化 - 只加载必要字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
     <!-- ヘッダー -->

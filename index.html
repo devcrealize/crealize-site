@@ -32,8 +32,14 @@
     <link rel="canonical" href="https://meka-tech.com">
     
     <title>メカセラ技研株式会社 - デジタルマーケティングの専門家</title>
+    
+    <!-- 缓存控制 -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta http-equiv="Expires" content="31536000">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
     
     <!-- 结构化数据 -->
     <script type="application/ld+json">
@@ -64,6 +70,19 @@
     }
     </script>
     
+    <!-- 资源预加载和缓存优化 -->
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="script-optimized.min.js" as="script">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    
+    <!-- 字体预加载优化 - 只加载必要字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
     <!-- 关键CSS内联 - 首屏渲染优化 -->
     <style>
         /* 关键CSS - 首屏渲染必需的基础样式 */
@@ -93,6 +112,58 @@
             color: var(--text-color);
             background-color: var(--background-color);
             overflow-x: hidden;
+        }
+        
+        /* 确保所有h1标签都有明确的字体大小 */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+        
+        /* 优化CLS - 为所有图片和iframe添加固定尺寸 */
+        img, iframe, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 确保logo图片有固定尺寸 */
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        /* 确保服务卡片图片有固定尺寸 */
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
+        }
+        
+        /* 确保案例图片有固定尺寸 */
+        .case-image {
+            width: 100%;
+            height: 200px;
+            min-height: 200px;
+            object-fit: cover;
+        }
+        
+        /* 优化CLS - 为hero区域设置固定尺寸 */
+        .hero {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .container {
