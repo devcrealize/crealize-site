@@ -166,26 +166,27 @@
         const privacy = formData.get('privacy');
         
         console.log('フォームデータ:', { inquiryType, name, email, message, privacy });
+        console.log('各項目の詳細:');
+        console.log('- inquiryType:', inquiryType, '(', typeof inquiryType, ')');
+        console.log('- name:', name, '(', typeof name, ')');
+        console.log('- email:', email, '(', typeof email, ')');
+        console.log('- message:', message, '(', typeof message, ')');
+        console.log('- privacy:', privacy, '(', typeof privacy, ')');
         
         // 验证
-        if (!inquiryType || !name || !email || !message || !privacy) {
-            console.log('バリデーション失敗');
-            console.log('不足項目:', {
-                inquiryType: !inquiryType,
-                name: !name,
-                email: !email,
-                message: !message,
-                privacy: !privacy
-            });
+        const missingFields = [];
+        if (!inquiryType) missingFields.push('お問い合わせの種類');
+        if (!name) missingFields.push('お名前');
+        if (!email) missingFields.push('メールアドレス');
+        if (!message) missingFields.push('お問い合わせ内容');
+        if (!privacy) missingFields.push('個人情報同意');
+        
+        if (missingFields.length > 0) {
+            console.log('バリデーション失敗 - 不足項目:', missingFields);
             e.preventDefault();
             
-            // 强制显示错误信息
             const errorMessage = '必須項目を入力してください。\n\n不足項目:\n' + 
-                  (!inquiryType ? '- お問い合わせの種類\n' : '') +
-                  (!name ? '- お名前\n' : '') +
-                  (!email ? '- メールアドレス\n' : '') +
-                  (!message ? '- お問い合わせ内容\n' : '') +
-                  (!privacy ? '- 個人情報同意\n' : '');
+                  missingFields.map(field => '- ' + field).join('\n');
             
             console.log('エラーメッセージ:', errorMessage);
             alert(errorMessage);
