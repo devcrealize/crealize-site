@@ -171,7 +171,18 @@
         
         // 验证通过，允许表单正常提交
         console.log('フォーム検証成功、確認ページにリダイレクトします');
-        // 表单会正常提交到 contact-confirm.html
+        
+        // 构建URL参数并跳转
+        const params = new URLSearchParams();
+        for (const [key, value] of formData.entries()) {
+            if (value) {
+                params.append(key, value);
+            }
+        }
+        
+        // 阻止默认提交，手动跳转
+        e.preventDefault();
+        window.location.href = 'contact-confirm.html?' + params.toString();
     }
     
     // 邮箱验证
