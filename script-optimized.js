@@ -79,9 +79,13 @@
     }, observerOptions);
     
     // DOM加载完成后初始化
+    console.log('script-optimized.js が読み込まれました');
+    
     if (document.readyState === 'loading') {
+        console.log('DOM読み込み中、イベントリスナーを設定');
         document.addEventListener('DOMContentLoaded', initApp);
     } else {
+        console.log('DOM既に読み込み完了、即座に初期化');
         initApp();
     }
     
@@ -157,15 +161,27 @@
         // 验证
         if (!inquiryType || !name || !email || !message || !privacy) {
             console.log('バリデーション失敗');
+            console.log('不足項目:', {
+                inquiryType: !inquiryType,
+                name: !name,
+                email: !email,
+                message: !message,
+                privacy: !privacy
+            });
             e.preventDefault();
-            showNotification('必須項目を入力してください。', 'error');
+            alert('必須項目を入力してください。\n\n不足項目:\n' + 
+                  (!inquiryType ? '- お問い合わせの種類\n' : '') +
+                  (!name ? '- お名前\n' : '') +
+                  (!email ? '- メールアドレス\n' : '') +
+                  (!message ? '- お問い合わせ内容\n' : '') +
+                  (!privacy ? '- 個人情報同意\n' : ''));
             return;
         }
         
         if (!isValidEmail(email)) {
             console.log('メールアドレスバリデーション失敗');
             e.preventDefault();
-            showNotification('有効なメールアドレスを入力してください。', 'error');
+            alert('有効なメールアドレスを入力してください。');
             return;
         }
         
@@ -182,6 +198,7 @@
         
         // 阻止默认提交，手动跳转
         e.preventDefault();
+        alert('フォーム送信成功！確認ページに移動します。');
         window.location.href = 'contact-confirm.html?' + params.toString();
     }
     
