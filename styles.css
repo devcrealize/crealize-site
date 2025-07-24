@@ -1259,6 +1259,65 @@ h1 {
     margin: 0 0 1rem 0;
 }
 
+/* 优化CLS - 为表单元素设置固定尺寸 */
+.form-group {
+    margin-bottom: 1.5rem;
+    min-height: 80px; /* 防止布局偏移 */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    min-height: 1.2em; /* 防止标签高度变化 */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    min-height: 44px; /* 防止输入框高度变化 */
+    box-sizing: border-box;
+}
+
+/* 优化复选框布局 */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    min-height: 24px; /* 防止复选框高度变化 */
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    position: relative;
+    background: white;
+    flex-shrink: 0;
+}
+
 .page-title {
     font-size: 3rem;
     font-weight: 700;
