@@ -23,13 +23,19 @@
 }
 
 :root {
-    --primary-color: #3f51b5;
-    --secondary-color: #00d4ff;
-    --accent-color: #e91e63;
-    --tertiary-color: #9c27b0;
+    /* 主色调 - 符合WCAG AA标准的对比度 */
+    --primary-color: #2c3e50;  /* 深蓝灰色，更好的对比度 */
+    --secondary-color: #3498db; /* 蓝色，符合对比度要求 */
+    --accent-color: #e74c3c;   /* 红色，符合对比度要求 */
+    --tertiary-color: #8e44ad; /* 紫色，符合对比度要求 */
+    
+    /* 背景和文字颜色 - 确保高对比度 */
     --background-color: #ffffff;
-    --text-color: #3f51b5;
-    --text-color-light: #5c6bc0;
+    --text-color: #2c3e50;     /* 深色文字，确保可读性 */
+    --text-color-light: #34495e; /* 稍浅的文字，但仍保持对比度 */
+    --text-color-white: #ffffff; /* 白色文字 */
+    
+    /* 辅助颜色 */
     --light-gray: #f8f9fa;
     --border-color: #e9ecef;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1540,8 +1546,8 @@ button, input, select, textarea {
 
 /* 统一footer样式 */
 .footer {
-    background: var(--text-color);
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-color-white);
     padding: 3rem 0 1rem;
 }
 
@@ -1569,20 +1575,20 @@ button, input, select, textarea {
 }
 
 .footer-section ul li a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .footer-section ul li a:hover {
-    color: white;
+    color: var(--text-color-white);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 1rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* 移动端响应式 - 统一所有768px以下的样式 */
