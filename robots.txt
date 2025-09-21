@@ -13,7 +13,7 @@ Allow: /script-optimized.min.js
 Allow: /sw.js
 
 # Sitemap
-Sitemap: https://devcrealize.github.io/sitemap.xml
+Sitemap: https://meka-tech.com/sitemap.xml
 
 # 爬虫延迟（可选）
 Crawl-delay: 1 
