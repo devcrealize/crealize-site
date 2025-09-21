@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="メカセラ技研株式会社は、デジタルマーケティングとウェブ開発の専門企業です。SEO、SNS運用、ウェブサイト制作でお客様のビジネス成長をサポートします。">
+    <meta name="keywords" content="デジタルマーケティング,SEO,SNS運用,ウェブサイト制作,メカセラ技研,海外マーケティング,ASO">
+    <meta name="author" content="メカセラ技研株式会社">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="ja">
+    <meta name="geo.region" content="JP">
+    <meta name="geo.placename" content="東京都港区">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="メカセラ技研株式会社 - デジタルマーケティングの専門家">
+    <meta property="og:description" content="お客様のビジネス成長をサポートするデジタルマーケティングソリューション">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meka-tech.com">
+    <meta property="og:site_name" content="メカセラ技研株式会社">
+    <meta property="og:image" content="https://meka-tech.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="メカセラ技研株式会社 - デジタルマーケティングの専門家">
+    <meta name="twitter:description" content="お客様のビジネス成長をサポートするデジタルマーケティングソリューション">
+    <meta name="twitter:image" content="https://meka-tech.com/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://meka-tech.com">
+    
+    <title>メカセラ技研株式会社 - デジタルマーケティングの専門家</title>
+    
+    <!-- 缓存控制 -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta http-equiv="Expires" content="31536000">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "メカセラ技研株式会社",
+        "alternateName": "MEKASERA TECH",
+        "url": "https://meka-tech.com",
+        "logo": "https://meka-tech.com/images/logo.svg",
+        "description": "デジタルマーケティングの専門家として、お客様のビジネス成長をサポートいたします。",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "港区",
+            "addressRegion": "東京都",
+            "addressCountry": "JP"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+81-90-7896-5243",
+            "contactType": "customer service",
+            "email": "contact@meka-tech.com",
+            "availableLanguage": "Japanese"
+        },
+        "sameAs": [
+            "https://meka-tech.com"
+        ]
+    }
+    </script>
+    
+    <!-- 资源预加载和缓存优化 -->
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="script-optimized.min.js" as="script">
+
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    
+    <!-- 字体优化 - 使用本地字体，避免外部字体加载 -->
+    <!-- 移除Google Fonts引用，使用CSS中的本地字体回退 -->
+    
+    <!-- 关键CSS内联 - 首屏渲染优化 -->
+    <style>
+        /* 关键CSS - 首屏渲染必需的基础样式 */
+        :root {
+            --primary-color: #3f51b5;
+            --secondary-color: #00d4ff;
+            --accent-color: #e91e63;
+            --tertiary-color: #9c27b0;
+            --background-color: #ffffff;
+            --text-color: #3f51b5;
+            --text-color-light: #5c6bc0;
+            --light-gray: #f8f9fa;
+            --border-color: #e9ecef;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            overflow-x: hidden;
+        }
+        
+        /* 确保所有h1标签都有明确的字体大小 */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+        
+        /* 优化CLS - 为所有图片和iframe添加固定尺寸 */
+        img, iframe, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 确保logo图片有固定尺寸 */
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        /* 确保服务卡片图片有固定尺寸 */
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
+        }
+        
+        /* 确保案例图片有固定尺寸 */
+        .case-image {
+            width: 100%;
+            height: 200px;
+            min-height: 200px;
+            object-fit: cover;
+        }
+        
+        /* 优化CLS - 为hero区域设置固定尺寸 */
+        .hero {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-color-light);
+            font-weight: 400;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+        
+        /* 汉堡菜单激活状态 */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* 移动端菜单激活状态 */
+        .nav-menu.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            border-radius: 0 0 8px 8px;
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        .nav-menu.active li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-menu.active a {
+            display: block;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .nav-menu.active a:last-child {
+            border-bottom: none;
+        }
+        
+        .nav-menu.active a:hover {
+            background: rgba(63, 81, 181, 0.1);
+            color: var(--primary-color);
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 英雄区域基础样式 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--tertiary-color) 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-title-main {
+            display: block;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-title-sub {
+            display: block;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--tertiary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* 英雄视觉元素 */
+        .hero-visual {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-graphic {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color), var(--tertiary-color));
+            animation: float 8s ease-in-out infinite;
+            opacity: 0.8;
+        }
+        
+        .floating-element:hover {
+            transform: scale(1.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .element-1 {
+            width: 120px;
+            height: 120px;
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+        
+        .element-2 {
+            width: 80px;
+            height: 80px;
+            top: 60%;
+            right: 30%;
+            animation-delay: 2s;
+        }
+        
+        .element-3 {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 40%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-20px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(10px) rotate(240deg);
+            }
+        }
+        
+        /* 移动端响应式 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-visual {
+                height: 300px;
+                order: -1;
+            }
+            
+            .floating-element {
+                opacity: 0.6;
+            }
+            
+            .element-1 {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .element-2 {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .element-3 {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero-visual {
+                height: 250px;
+            }
+            
+            .element-1 {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .element-2 {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .element-3 {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    </style>
+    
+    <!-- 非关键资源异步加载 -->
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    
+    <!-- 关键资源预加载 -->
+    <link rel="preload" href="script-optimized.min.js" as="script">
+    <link rel="preload" href="images/logo.svg" as="image" type="image/svg+xml">
+    
+
+</head>
+<body>
+    <a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container" role="navigation" aria-label="メインナビゲーション">
+                                            <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <img src="images/logo.svg" alt="メカセラ技研ロゴ" class="logo-image">
+                    </div>
+                    <div>
+                        <h1>メカセラ技研</h1>
+                        <span class="logo-subtitle">MEKASERA TECH</span>
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#home">ホーム</a></li>
+                    <li><a href="#about">会社概要</a></li>
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#cases">事例</a></li>
+                    <li><a href="#contact" class="cta-button">お問い合わせ</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインビジュアル -->
+    <main id="main-content">
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2 class="hero-title">
+                    <span class="hero-title-main">革新的なテクノロジーで、</span>
+                    <span class="hero-title-sub">グローバルマーケティングの成果を最大化</span>
+                </h2>
+                <p class="hero-description">
+                    メカセラ技研は、最新のデジタルマーケティング技術と戦略的アプローチを駆使し、お客様の海外展開を強力にサポートいたします。
+                    SEO対策やASO（アプリストア最適化）においても、豊富な実績と独自の手法により圧倒的なトラフィック獲得を実現し、グローバル市場でのビジネス成長を力強く後押しいたします。
+                </p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">サービスを見る</a>
+                    <a href="#contact" class="btn btn-secondary">無料相談</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-graphic">
+                    <div class="floating-element element-1"></div>
+                    <div class="floating-element element-2"></div>
+                    <div class="floating-element element-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービスセクション -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">サービス</h2>
+                <p class="section-subtitle">お客様一人ひとりのニーズに寄り添い、戦略立案から実行までをトータルでサポートするソリューションをご提案いたします。</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                        </svg>
+                    </div>
+                    <h3>SEO対策</h3>
+                    <p>検索意図に基づく戦略的アプローチにより、上位表示とコンバージョン獲得を同時に実現いたします。短期の順位改善だけでなく、長期的に成果を出すSEOパートナーとしてお客様のビジネス成長をサポートいたします。</p>
+                    
+                    <div class="service-details">
+                        <h4>主なサービス内容</h4>
+                        <div class="service-detail-item">
+                            <h5>キーワード設計・ユーザーインテント分析</h5>
+                            <p>お客様のニーズと検索意図を可視化し、ビジネスに直結するキーワード戦略を構築いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>SEOに最適化されたコンテンツ制作</h5>
+                            <p>検索エンジンの評価アルゴリズムを考慮した、E-E-A-T（専門性・権威性・信頼性・経験）に対応したコンテンツを企画・制作いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>テクニカルSEOの実装支援</h5>
+                            <p>Core Web Vitals、構造化データ、内部リンク最適化、モバイル対応、インデックス管理まで包括的に対応いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>月次レポート・改善提案</h5>
+                            <p>順位推移・流入分析・コンバージョン効果を可視化し、次なるアクションにつなげるPDCAサイクルを構築いたします。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2"/>
+                        </svg>
+                    </div>
+                    <h3>SNS運用支援（TikTok・YouTube・Instagram 等）</h3>
+                    <p>ソーシャルメディアとインフルエンサーマーケティングを融合し、ブランド構築とファン化を両立いたします。バズ獲得と中長期的なエンゲージメント強化により、持続的な成長を実現いたします。</p>
+                    
+                    <div class="service-details">
+                        <h4>主なサービス内容</h4>
+                        <div class="service-detail-item">
+                            <h5>戦略設計・アカウント設計</h5>
+                            <p>プラットフォームごと（TikTok／YouTube Shorts／Instagram Reels 等）のアルゴリズムやトレンドを反映した戦略設計を行います。ペルソナに基づく投稿テーマとKPI設計により、成果につながる運用設計を実施いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>コンテンツ企画・動画制作</h5>
+                            <p>ショート動画に特化した企画・撮影・編集・テロップ制作をワンストップで対応いたします（TikTok／YouTube／Instagram）。E-E-A-T を意識し、企業の専門性・信頼性を伝えるストーリーテリング型コンテンツを設計いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>投稿スケジューリング・マネジメント</h5>
+                            <p>バイラル狙いの旬のタイミング（例：TikTokトレンドチャレンジ・トピックタグ）に合わせた効率的な投稿計画を立てます。独自ツールやExcel／専用CMSでのスケジュール管理・進行体制を整備いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>コミュニティ運営・コメント対応</h5>
+                            <p>インフルエンサーやファンとの接点構築による双方向コミュニケーションを促進いたします。コメント監視、取材対応、炎上リスク・クレーム即時対応体制を構築いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>効果測定・PDCAレポート</h5>
+                            <p>フォロワー数、再生・いいね・保存・クリックなど主要指標を月次レポートで可視化いたします。トレンドレポートや競合比較も交えた改善提案・施策アップデートを実施いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>インフルエンサーマーケティング連携</h5>
+                            <p>登録フォロワー10万超のクリエイター起用やMCN契約済パートナーとの協業により、さらにリーチ拡大を実現いたします。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3>海外APP ASO支援</h3>
+                    <p>グローバル向けアプリの可視性とダウンロード数を最大化し、ビジネス成果に直結するASO戦略を提供いたします。</p>
+                    
+                    <div class="service-details">
+                        <h4>コア戦略・強み</h4>
+                        <div class="service-detail-item">
+                            <h5>キーワード調査・最適化</h5>
+                            <p>専門ツール（例：AppTweak、Sensor Tower）を活用し、各国での検索ボリュームと競合状況を徹底分析いたします。海外ユーザーのニーズに応えるロングテールキーワードも発掘いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>多言語ローカライゼーション</h5>
+                            <p>単なる翻訳ではなく、文化的背景や表記のニュアンス（例：日本語におけるひらがな・漢字・カタカナの使い分け）を考慮した「感性を捉える翻訳」を実施いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>アプリストアページ最適化</h5>
+                            <p>タイトル・サブタイトル・説明文・キーワード欄の構成はSEO＋コンバージョン率（CVR）向上を視野に設計いたします。アイコン・スクリーンショット・プロモーション動画についても、A/Bテストやベンチマークをもとに視覚訴求を最適化いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>競合モニタリング</h5>
+                            <p>ストア内での類似アプリの動きを常に監視し、ランキング変動やアップデート内容に即応いたします。戦略のアップデートに反映してPDCAを高速で回します。</p>
+                        </div>
+                        
+                        <h4>独自手法：リアルユーザー活用によるダウンロード促進</h4>
+                        <div class="service-detail-item">
+                            <h5>タスクウォール経由でのリアルユーザー誘導</h5>
+                            <p>実際のユーザーにタスク（例：「アプリをダウンロードして触ってみる」「レビューを書く」など）を提供し、自然な形でダウンロード数とダウンロード速度（Velocity）を高めます。これはASO指標の重要な要素です。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>ゲームアプリ・汎用アプリ領域での横断支援</h5>
+                            <p>多ジャンルで培った経験をもとに、アプリの特性に応じたキーワード構造やUI訴求を設計いたします。</p>
+                        </div>
+                        
+                        <h4>成果可視化・PDCA</h4>
+                        <div class="service-detail-item">
+                            <h5>月次・週次レポート</h5>
+                            <p>インプレッション数、ダウンロード数、CV率、レビュー数・評価の変化などを可視化し、施策効果を分析いたします。次の改善施策を明確にいたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>エンゲージメント解析</h5>
+                            <p>レビューの質や量、評価の平均点、DAU（デイリーアクティブユーザー）率など、ランキング維持に不可欠な指標を継続的に追跡いたします。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.122 2.122"/>
+                        </svg>
+                    </div>
+                    <h3>海外アプリ広告運用支援</h3>
+                    <p>Google Ads・Facebook Ads・TikTok Adsといった主要プラットフォームを活用し、アプリのダウンロード（ユーザー獲得・UA）に特化した広告戦略を設計・運用いたします。</p>
+                    
+                    <div class="service-details">
+                        <h4>基礎戦略</h4>
+                        <div class="service-detail-item">
+                            <h5>キャンペーン設計・運用最適化</h5>
+                            <p>国・地域・デモグラフィックに応じて目的別（CPI・ROAS）に予算配分し、効果的な広告構成を実現いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>クリエイティブとランディング最適化</h5>
+                            <p>バナー・動画・カルーセルなど、各媒体の推奨フォーマットに準拠したA/Bテストを実施いたします。クリック後は最適化されたダウンロードページに誘導いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>ターゲティング・入札管理</h5>
+                            <p>ユーザー属性・行動履歴・CVRなどを活用し、精緻なオーディエンス設計とリアルタイム入札調整で費用対効果を最大化いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>リアルタイムモニタリング・高速PDCA</h5>
+                            <p>CPI・CTR・CVRをリアルタイムで監視し、クリエイティブ差替え・予算再配分を即時実施いたします。パフォーマンスを常に最適水準に保ちます。</p>
+                        </div>
+                        
+                        <h4>独自導入：Telegram × タスクウォールによる「リアルダウンロード」</h4>
+                        <div class="service-detail-item">
+                            <h5>Telegram広告連携でリアルユーザーへ直接アプローチ</h5>
+                            <p>Telegramの広告プラットフォームを活用し、チャネル内に自然な形で配信することで、「実際にアプリを使うユーザー」の獲得を目指します。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>タスクウォールによる実作業型ダウンロード誘導</h5>
+                            <p>タスクウォール上で「アプリをダウンロードして起動」「レビュー投稿」などの実タスクを提供し、リアルユーザーによる自然なダウンロード・レビュー増加によって、VelocityやASO評価を強化いたします。</p>
+                        </div>
+                        
+                        <h4>成果測定と最適化</h4>
+                        <div class="service-detail-item">
+                            <h5>週次・月次レポートで可視化</h5>
+                            <p>インプレッション・クリック・CPI・LTV・リテンション・ROASなどのKPIをグラフィカルに整理し、課題抽出と改善策を提示いたします。</p>
+                        </div>
+                        <div class="service-detail-item">
+                            <h5>費用対効果の定量分析</h5>
+                            <p>CAC・LTV・広告ROIをもとに、最も効率的な広告投資配分へ調整いたします。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会社概要セクション -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                                <div class="about-text">
+                    <h2>メカセラ技研について</h2>
+                    <p class="about-description">
+                        私たちメカセラ技研は、テクノロジーの力を最大限に活用し、お客様の事業拡大と市場での新たな可能性の創出を使命としております。豊富な導入実績と最新のマーケティング手法を融合し、お客様の成功を伴走型でサポートいたします。
+                    </p>
+                    
+                    <h3>主な実績</h3>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">120+</span>
+                            <span class="stat-label">プロジェクト支援実績</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">6年</span>
+                            <span class="stat-label">業界運用経験</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">導入後成果改善率</span>
+                        </div>
+                    </div>
+                    
+                    <p class="about-description">
+                        これらの実績は、当社が多様な業界・業態において確かな成果を継続的に生み出している証です。広告運用、SEO、ASO、SNS運用など、各種施策においても高い改善率を実現しております。
+                    </p>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=70" alt="メカセラ技研株式会社 - 会社イメージ" class="company-image" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 事例セクション -->
+    <section id="cases" class="cases">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">成功事例</h2>
+                <p class="section-subtitle">お客様との協働による成果</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=70" alt="ECサイト売上向上事例" class="case-image-img" loading="lazy">
+                    </div>
+                    <div class="case-content">
+                        <h3>ECサイト売上の飛躍的改善</h3>
+                        <div class="case-achievement">
+                            <span class="achievement-badge">+150% achieved</span>
+                        </div>
+                        <div class="case-details">
+                            <p>SEO対策強化により、月間セッション数が200％増加いたしました。特定キーワードで検索順位が1位を獲得し、顧客接触率を向上させました。</p>
+                            <div class="case-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">📈</span>
+                                    <span>売上150％アップ</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">🚀</span>
+                                    <span>流入200％増加</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-results">
+                            <div class="result">
+                                <span class="result-number">+150%</span>
+                                <span class="result-label">売上向上</span>
+                            </div>
+                            <div class="result">
+                                <span class="result-number">+200%</span>
+                                <span class="result-label">セッション数増加</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=70" alt="SNSフォロワー急増事例" class="case-image-img" loading="lazy">
+                    </div>
+                    <div class="case-content">
+                        <h3>SNSフォロワーの急成長</h3>
+                        <div class="case-achievement">
+                            <span class="achievement-badge">+300% achieved</span>
+                        </div>
+                        <div class="case-details">
+                            <p>投稿頻度・コンテンツ戦略を見直し、エンゲージメント指標を改善。フォロワーとの接触率（いいね・コメント）を重視し、月間インプレッションが5倍に増加しました。</p>
+                            <div class="case-highlights">
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">👥</span>
+                                    <span>フォロワー数3倍</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-icon">💬</span>
+                                    <span>エンゲージメント率大幅増</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-results">
+                            <div class="result">
+                                <span class="result-number">+300%</span>
+                                <span class="result-label">フォロワー数増加</span>
+                            </div>
+                            <div class="result">
+                                <span class="result-number">5倍</span>
+                                <span class="result-label">インプレッション増加</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-subtitle">お気軽にご相談ください</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>連絡先情報</h3>
+
+                    <div class="contact-item">
+                        <span class="contact-label">メール:</span>
+                        <span class="contact-value">contact@meka-tech.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">電話:</span>
+                        <span class="contact-value">90-7896-5243</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">住所:</span>
+                        <span class="contact-value">東京都港区新橋四丁目21番3号</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">営業時間:</span>
+                        <span class="contact-value">平日 9:00〜18:00</span>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <h3>お問い合わせフォーム</h3>
+                    <p>詳細なお問い合わせは、専用フォームをご利用ください。</p>
+                    <div class="contact-buttons">
+                        <a href="contact.html" class="btn btn-primary">お問い合わせフォーム</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>メカセラ技研株式会社</h3>
+                    <p>デジタルマーケティングの専門家として、お客様のビジネス成長をサポートいたします。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="services.html">SEO対策</a></li>
+                        <li><a href="services.html">SNS運用</a></li>
+                        <li><a href="services.html">海外APP ASO</a></li>
+                        <li><a href="services.html">海外向け広告運用</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="index.html#cases">事例</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>お問い合わせ</h4>
+                    <ul>
+                        <li>電話: 90-7896-5243</li>
+                        <li>メール: contact@meka-tech.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 メカセラ技研株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </main>
+
+    <!-- JavaScript异步加载 -->
+    <script src="script-optimized.min.js" defer></script>
+    <script>
+        // 性能监控
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                console.log(`页面加载时间: ${loadTime}ms`);
+                
+                // 记录关键指标
+                if ('PerformanceObserver' in window) {
+                    const observer = new PerformanceObserver((list) => {
+                        for (const entry of list.getEntries()) {
+                            if (entry.entryType === 'largest-contentful-paint') {
+                                console.log(`LCP: ${entry.startTime}ms`);
+                            }
+                        }
+                    });
+                    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+                }
+            });
+        }
+        
+        // 注册Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+    
+</body>
+</html> 

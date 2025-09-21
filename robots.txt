@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# 禁止访问测试页面
+Disallow: /test-*.html
+Disallow: /performance-test.html
+Disallow: /mobile-layout-test.html
+
+# 允许访问重要资源
+Allow: /images/
+Allow: /styles.min.css
+Allow: /script-optimized.min.js
+Allow: /sw.js
+
+# Sitemap
+Sitemap: https://meka-tech.com/sitemap.xml
+
+# 爬虫延迟（可选）
+Crawl-delay: 1 

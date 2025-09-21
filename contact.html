@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - メカセラ技研 | MEKASERA TECH</title>
+    <meta name="description" content="メカセラ技研へのお問い合わせはこちらから。SEO対策、ASO対策、グローバルマーケティングについてご相談ください。">
+    <meta name="keywords" content="お問い合わせ, メカセラ技研, SEO対策, ASO対策, グローバルマーケティング">
+    <meta name="author" content="メカセラ技研">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="ja">
+    <meta name="geo.region" content="JP">
+    <meta name="geo.placename" content="Tokyo">
+    
+    <!-- 缓存控制 -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    <meta http-equiv="Expires" content="31536000">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="お問い合わせ - メカセラ技研 | MEKASERA TECH">
+    <meta property="og:description" content="メカセラ技研へのお問い合わせはこちらから。SEO対策、ASO対策、グローバルマーケティングについてご相談ください。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://meka-tech.com/contact.html">
+    <meta property="og:site_name" content="メカセラ技研 | MEKASERA TECH">
+    <meta property="og:image" content="https://meka-tech.com/images/company-image.jpg">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="お問い合わせ - メカセラ技研 | MEKASERA TECH">
+    <meta name="twitter:description" content="メカセラ技研へのお問い合わせはこちらから。SEO対策、ASO対策、グローバルマーケティングについてご相談ください。">
+    <meta name="twitter:image" content="https://meka-tech.com/images/company-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://meka-tech.com/contact.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" sizes="any">
+    
+    <!-- 关键CSS内联 -->
+    <style>
+        /* 关键渲染路径CSS - 统一色彩规范 */
+        :root {
+            --primary-color: #3f51b5;
+            --secondary-color: #00d4ff;
+            --accent-color: #e91e63;
+            --tertiary-color: #9c27b0;
+            --background-color: #ffffff;
+            --text-color: #3f51b5;
+            --text-color-light: #5c6bc0;
+            --light-gray: #f8f9fa;
+            --border-color: #e9ecef;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            overflow-x: hidden;
+        }
+        
+
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--tertiary-color) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--text-color-light);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            text-align: center;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            min-height: 80px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+            min-height: 1.2em;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            min-height: 44px;
+            box-sizing: border-box;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            cursor: pointer;
+            min-height: 24px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            margin: 0;
+            flex-shrink: 0;
+        }
+        
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            min-height: 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            position: relative;
+            background: white;
+            flex-shrink: 0;
+        }
+        
+        .checkbox-label input[type="checkbox"]:checked ~ .checkmark {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .checkbox-label input[type="checkbox"]:checked ~ .checkmark:after {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        
+        .access-map {
+            position: relative;
+            min-height: 400px;
+            aspect-ratio: 16/9;
+            width: 100%;
+        }
+        
+        .access-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: var(--border-radius);
+        }
+        
+        .map-info {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+        
+        .map-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .map-actions a {
+            padding: 0.5rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+        
+        .map-actions a:hover {
+            background: var(--text-color-light);
+        }
+        
+        .footer {
+            background: var(--text-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+        
+        /* 确保所有h1标签都有明确的字体大小 */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+        
+        /* 优化CLS - 为所有图片和iframe添加固定尺寸 */
+        img, iframe, video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 确保logo图片有固定尺寸 */
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        /* 确保服务卡片图片有固定尺寸 */
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            min-height: 60px;
+        }
+        
+        /* 确保案例图片有固定尺寸 */
+        .case-image {
+            width: 100%;
+            height: 200px;
+            min-height: 200px;
+            object-fit: cover;
+        }
+    </style>
+    
+    <!-- 资源预加载和缓存优化 -->
+    <link rel="preload" href="styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="script-optimized.min.js" as="script">
+
+    <noscript><link rel="stylesheet" href="styles.min.css"></noscript>
+    
+    <!-- 字体优化 - 使用本地字体，避免外部字体加载 -->
+    <!-- 移除Google Fonts引用，使用CSS中的本地字体回退 -->
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container" role="navigation" aria-label="メインナビゲーション">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <img src="images/logo.svg" alt="メカセラ技研ロゴ" class="logo-image">
+                    </div>
+                    <div>
+                        <h1>メカセラ技研</h1>
+                        <span class="logo-subtitle">MEKASERA TECH</span>
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">ホーム</a></li>
+                    <li><a href="index.html#about">会社概要</a></li>
+                    <li><a href="index.html#services">サービス</a></li>
+                    <li><a href="index.html#cases">事例</a></li>
+                    <li><a href="contact.html" class="cta-button active">お問い合わせ</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ページヘッダー -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">お問い合わせ</h1>
+            <p class="page-subtitle">お気軽にご相談ください</p>
+        </div>
+    </section>
+
+
+
+    <!-- お問い合わせフォーム -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">お問い合わせフォーム</h2>
+            </div>
+            <div class="form-container">
+                <form class="contact-form-detailed" id="contactForm" action="contact-confirm.html" method="GET">
+                    <div class="form-group">
+                        <label for="inquiry-type">お問い合わせの種類 <span class="required">*</span></label>
+                        <select id="inquiry-type" name="inquiry-type" required>
+                            <option value="">選択</option>
+                            <option value="consultation">相談</option>
+                            <option value="request">依頼</option>
+                            <option value="materials">資料請求</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>希望サービス（複数選択可）</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="seo">
+                                <span class="checkmark"></span>
+                                <span>SEO対策</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="ec">
+                                <span class="checkmark"></span>
+                                <span>EC構築</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="sns">
+                                <span class="checkmark"></span>
+                                <span>SNS運用</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="other">
+                                <span class="checkmark"></span>
+                                <span>その他</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">お名前 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" autocomplete="name" required placeholder="例：山田 太郎">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required placeholder="例：taro@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">会社名（任意）</label>
+                        <input type="text" id="company" name="company" autocomplete="organization">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">電話番号（任意）</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" required placeholder="例：ECサイト集客について相談したいです"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required checked>
+                            <span class="checkmark"></span>
+                            <span>個人情報は本件対応のみに使用いたします。 <span class="required">*</span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-large">送信する</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- アクセスマップ -->
+    <section class="access">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">アクセス</h2>
+                <p class="section-subtitle">オフィスへのアクセス方法</p>
+            </div>
+            <div class="access-content">
+                <div class="access-info">
+                    <h3>所在地</h3>
+                    <p>〒105-0004<br>Tokyo, Minato City, Shinbashi, 4-chōme−21−3 新橋東急ビル</p>
+                    
+                    <h3>最寄り駅</h3>
+                    <ul class="access-list">
+                        <li><strong>JR新橋駅</strong> 徒歩3分</li>
+                        <li><strong>東京メトロ新橋駅</strong> 徒歩2分</li>
+                        <li><strong>都営浅草線新橋駅</strong> 徒歩3分</li>
+                    </ul>
+                    
+                    <h3>営業時間</h3>
+                    <p>平日 9:00〜18:00<br>土日祝日は休業</p>
+                    
+                    <h3>駐車場</h3>
+                    <p>ビル内に駐車場がございます。<br>事前にご連絡ください。</p>
+                </div>
+                <div class="access-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479757503777!2d139.7563!3d35.6654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b8b4f8b8b8b%3A0x8b8b8b8b8b8b8b8b!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1234567890"
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 8px; aspect-ratio: 16/9;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="メカセラ技研株式会社 新橋東急ビル">
+                    </iframe>
+                    <div class="map-info">
+                        <p><strong>メカセラ技研株式会社</strong></p>
+                        <p>〒105-0004 Tokyo, Minato City, Shinbashi, 4-chōme−21−3 新橋東急ビル</p>
+                        <div class="map-actions">
+                            <a href="https://www.google.com/maps?q=Shinbashi+Tokyu+Bldg,+Tokyo,+Japan" target="_blank" class="btn btn-outline">Google Mapsで開く</a>
+                            <a href="https://www.google.com/maps/dir//Shinbashi+Tokyu+Bldg,+Tokyo,+Japan" target="_blank" class="btn btn-secondary">ルート案内</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="contact-faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">よくある質問</h2>
+                <p class="section-subtitle">お問い合わせ前にご確認ください</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>無料相談は可能ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、初回相談は無料で承っております。お客様の現状と課題をお聞かせいただき、最適なソリューションをご提案いたします。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>お見積りは無料ですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>はい、お見積りは無料で承っております。詳細な要件をお聞かせいただければ、正確なお見積りをご提供いたします。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>対応可能な業界はありますか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>業界を問わず対応可能です。EC、製造業、サービス業、スタートアップなど、様々な業界のお客様とお取引実績がございます。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>契約期間はどのくらいですか？</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>最低契約期間は6ヶ月となっております。継続的な改善により効果を最大化するため、長期的なパートナーシップをお勧めしています。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>メカセラ技研株式会社</h3>
+                    <p>デジタルマーケティングの専門家として、お客様のビジネス成長をサポートいたします。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>サービス</h4>
+                    <ul>
+                        <li><a href="services.html">SEO対策</a></li>
+                        <li><a href="services.html">SNS運用</a></li>
+
+                        <li><a href="services.html">海外APP ASO</a></li>
+                        <li><a href="services.html">海外向け広告運用</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="index.html#cases">事例</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>お問い合わせ</h4>
+                    <ul>
+                        <li>電話: 90-7896-5243</li>
+                        <li>メール: contact@meka-tech.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 メカセラ技研株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <link rel="preload" href="script-optimized.min.js" as="script">
+    <script src="script-optimized.min.js" defer></script>
+</body>
+</html> 
